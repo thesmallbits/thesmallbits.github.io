@@ -1,6 +1,9 @@
 import { cn, type PropsWithChildren } from "@d1vij/shit-i-always-use";
 import { Hash, type LucideIcon } from "lucide-react";
 import { Link, type LinkProps } from "@tanstack/react-router";
+import { useState } from "react";
+
+import Menu from "./HeaderMenu";
 
 function HeaderInteractable(props: PropsWithChildren) {
     return (
@@ -43,19 +46,25 @@ function HeaderButton({ Content: Title, action }: HeaderButtonProps) {
     );
 }
 
-export default function Header() {
-    // const [isOpen, setIsOpen] = useState(false);
+import { HeaderMenuLists } from "@/content/HeaderMenuLists";
 
+export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+    function toggleMenu() {
+        setIsOpen((o) => !o);
+    }
     return (
         <header
             className={cn(
+                "relative",
                 "primary-border cool-background-shit",
                 "relative z-30 h-fit border-0 border-t-0 border-b w-full",
                 "grid grid-cols-[1fr_auto_1fr]",
             )}
         >
+            {isOpen && <Menu lists={HeaderMenuLists} />}
             <span className="flex gap-2 mr-4 m-2">
-                <HeaderButton Content="Menu" action={() => alert()} />
+                <HeaderButton Content="Menu" action={toggleMenu} />
             </span>
             <h1
                 className={cn(

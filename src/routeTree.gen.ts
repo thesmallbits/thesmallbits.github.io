@@ -11,7 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as RepositoryIndexRouteImport } from './routes/repository/index'
 import { Route as BlogsIndexRouteImport } from './routes/blogs/index'
+import { Route as RepositoryRepositoryRouteImport } from './routes/repository/$repository'
 import { Route as BlogsBlogRouteImport } from './routes/blogs/$blog'
 
 const AboutRoute = AboutRouteImport.update({
@@ -24,9 +26,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RepositoryIndexRoute = RepositoryIndexRouteImport.update({
+  id: '/repository/',
+  path: '/repository/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogsIndexRoute = BlogsIndexRouteImport.update({
   id: '/blogs/',
   path: '/blogs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RepositoryRepositoryRoute = RepositoryRepositoryRouteImport.update({
+  id: '/repository/$repository',
+  path: '/repository/$repository',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogsBlogRoute = BlogsBlogRouteImport.update({
@@ -39,34 +51,61 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blogs/$blog': typeof BlogsBlogRoute
+  '/repository/$repository': typeof RepositoryRepositoryRoute
   '/blogs/': typeof BlogsIndexRoute
+  '/repository/': typeof RepositoryIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blogs/$blog': typeof BlogsBlogRoute
+  '/repository/$repository': typeof RepositoryRepositoryRoute
   '/blogs': typeof BlogsIndexRoute
+  '/repository': typeof RepositoryIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blogs/$blog': typeof BlogsBlogRoute
+  '/repository/$repository': typeof RepositoryRepositoryRoute
   '/blogs/': typeof BlogsIndexRoute
+  '/repository/': typeof RepositoryIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/blogs/$blog' | '/blogs/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/blogs/$blog'
+    | '/repository/$repository'
+    | '/blogs/'
+    | '/repository/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/blogs/$blog' | '/blogs'
-  id: '__root__' | '/' | '/about' | '/blogs/$blog' | '/blogs/'
+  to:
+    | '/'
+    | '/about'
+    | '/blogs/$blog'
+    | '/repository/$repository'
+    | '/blogs'
+    | '/repository'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/blogs/$blog'
+    | '/repository/$repository'
+    | '/blogs/'
+    | '/repository/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BlogsBlogRoute: typeof BlogsBlogRoute
+  RepositoryRepositoryRoute: typeof RepositoryRepositoryRoute
   BlogsIndexRoute: typeof BlogsIndexRoute
+  RepositoryIndexRoute: typeof RepositoryIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -85,11 +124,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/repository/': {
+      id: '/repository/'
+      path: '/repository'
+      fullPath: '/repository/'
+      preLoaderRoute: typeof RepositoryIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blogs/': {
       id: '/blogs/'
       path: '/blogs'
       fullPath: '/blogs/'
       preLoaderRoute: typeof BlogsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/repository/$repository': {
+      id: '/repository/$repository'
+      path: '/repository/$repository'
+      fullPath: '/repository/$repository'
+      preLoaderRoute: typeof RepositoryRepositoryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blogs/$blog': {
@@ -106,7 +159,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BlogsBlogRoute: BlogsBlogRoute,
+  RepositoryRepositoryRoute: RepositoryRepositoryRoute,
   BlogsIndexRoute: BlogsIndexRoute,
+  RepositoryIndexRoute: RepositoryIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

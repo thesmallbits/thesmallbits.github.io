@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="bg-light-primary">
+<html lang="en" class="bg-light-primary min-h-dvh min-w-dvw">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,8 +20,11 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-light-primary text-light-text-primary">
-    <div id="root" class="absolute inset-0 text-[12px] md:text-[16px] lg:text-[18px]"></div>
+  <body class="bg-light-primary text-light-text-primary min-h-dvh min-w-dvw">
+    <div
+      id="root"
+      class="size-full text-[12px] md:text-[16px] lg:text-[18px] relative"
+    ></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

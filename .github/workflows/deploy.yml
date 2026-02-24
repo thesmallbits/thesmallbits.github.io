@@ -1,0 +1,35 @@
+name: Deploy to thesmallbits.github.io
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write   
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install deps
+        run: bun ci
+
+      - name: Build
+        run: bun run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          external_repository: thesmallbits/username.github.io
+          publish_branch: main
+          publish_dir: ./dist
+          force_orphan: true

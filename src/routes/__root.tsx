@@ -2,7 +2,7 @@ import { cn } from "@d1vij/shit-i-always-use";
 import { createRootRoute, HeadContent, Outlet } from "@tanstack/react-router";
 import { lazy } from "react";
 
-const Header = lazy(() => import("@/components/Header"));
+const Header = lazy(() => import("@/components/Header/Header"));
 const Footer = lazy(() => import("@/components/Footer"));
 
 export const Route = createRootRoute({
