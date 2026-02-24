@@ -1,9 +1,16 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
     component: RouteComponent,
+    head: () => ({
+        meta: [{ title: "thesmallbits" }],
+    }),
 });
 
 function RouteComponent() {
-    return <div>Hello "/"!</div>;
+    return (
+        <div className="p-3">
+            <Link to="/blogs">Blogs</Link>
+        </div>
+    );
 }

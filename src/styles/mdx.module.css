@@ -1,0 +1,145 @@
+@reference "tailwindcss";
+.header {
+  @apply w-full font-semibold cursor-pointer;
+  @apply mb-4;
+  &:active {
+    background-color: red;
+  }
+}
+
+.header_button {
+  /*@apply mb-2 mt-2;*/
+  @apply size-full flex justify-start items-baseline text-start;
+  @apply leading-9;
+  display: block;
+  pointer-events: none;
+  border: none;
+  font-size: inherit;
+}
+.header_1 {
+  font-size: 3em;
+}
+
+.header_2 {
+  font-size: 2.25em;
+}
+
+.header_3 {
+  font-size: 1.875em;
+}
+
+.header_4 {
+  font-size: 1.5em;
+}
+
+.header_5 {
+  font-size: 1.25em;
+}
+
+.header_6 {
+  font-size: 1.125em;
+}
+
+.header_icon {
+  /**/
+}
+
+.anchor {
+  /*@apply underline hover:decoration-3 decoration-2 decoration-dotted;*/
+  border-bottom-style: dotted;
+  border-bottom-width: 2px;
+}
+
+.button {
+  /**/
+}
+
+.bold {
+  @apply font-bold;
+}
+
+.italic {
+  @apply italic;
+}
+
+.span {
+  /**/
+}
+
+.striked {
+  @apply line-through decoration-1 decoration-wavy;
+}
+
+.paragraph {
+  /**/
+}
+
+.code {
+  @apply bg-gray-200/80 border-gray-400 border font-mono;
+  @apply p-0.5 px-1 rounded;
+}
+
+.preformatted {
+  @apply bg-gray-300;
+  @apply font-mono p-2 rounded border border-gray-400 mb-2;
+  .code {
+    @apply bg-inherit border-none p-0;
+  }
+}
+
+.blockquote {
+  @apply bg-gray-200;
+  @apply pl-4 p-2 m-1;
+  @apply border-l-4 border-gray-400 rounded border;
+}
+
+.horizontal_line {
+  @apply mt-2 mb-2;
+}
+
+.image {
+  /**/
+}
+
+.list {
+  /**/
+}
+
+.unordered_list {
+  @apply list-disc;
+}
+
+.ordered_list {
+  @apply list-decimal;
+}
+
+.list_item {
+  /**/
+}
+
+.table {
+  @apply bg-gray-200;
+  @apply border border-gray-500 rounded-xl;
+}
+
+.table_head {
+  @apply border border-gray-500 rounded-xl;
+}
+
+.table_head_cell {
+  @apply bg-gray-400 p-2;
+  @apply border border-gray-500 rounded-xl;
+}
+
+.table_body {
+  @apply border border-gray-500 rounded-xl;
+}
+
+.table_row {
+  @apply border border-gray-500 rounded-xl;
+}
+
+.table_data {
+  @apply p-2;
+  @apply border border-gray-500 rounded-xl;
+}

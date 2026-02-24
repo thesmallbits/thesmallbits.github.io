@@ -1,15 +1,15 @@
 import "@/tailwind.css";
 import "@/index.css";
 
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
 import {
     createHashHistory,
     createRouter,
     RouterProvider,
 } from "@tanstack/react-router";
-import { routeTree } from "./routeTree.gen";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import config from "../config";
+import { routeTree } from "./routeTree.gen";
 
 const router = createRouter({
     routeTree,

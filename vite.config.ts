@@ -5,16 +5,23 @@ import { tanstackRouter } from "@tanstack/router-vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
+import jassm from "@d1vij/jassm/plugin";
+
 
 // https://vite.dev/config/
 export default defineConfig({
     base: "/",
+    server: {
+        host: true,
+        allowedHosts: true
+    },
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "src"),
         },
     },
     plugins: [
+        jassm(),
         tailwindcss(),
         tanstackRouter({
             autoCodeSplitting: true,
