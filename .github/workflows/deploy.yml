@@ -29,7 +29,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          external_repository: thesmallbits/username.github.io
+          external_repository: thesmallbits/thesmallbits.github.io
           publish_branch: main
           publish_dir: ./dist
           force_orphan: true
