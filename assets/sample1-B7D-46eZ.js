@@ -1,4 +1,4 @@
-import{c as e,l as t}from"./index-DlaOI23f.js";var n=t(e());function r(e){let t={a:`a`,blockquote:`blockquote`,code:`code`,del:`del`,em:`em`,h1:`h1`,h2:`h2`,h3:`h3`,h4:`h4`,h5:`h5`,h6:`h6`,hr:`hr`,img:`img`,input:`input`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,section:`section`,strong:`strong`,sup:`sup`,table:`table`,tbody:`tbody`,td:`td`,th:`th`,thead:`thead`,tr:`tr`,ul:`ul`,...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(t.h1,{children:`GitHub Flavored Markdown (GFM) Example`}),`
+import{c as e,l as t}from"./index-DYr0fLg8.js";var n=t(e());function r(e){let t={a:`a`,blockquote:`blockquote`,code:`code`,del:`del`,em:`em`,h1:`h1`,h2:`h2`,h3:`h3`,h4:`h4`,h5:`h5`,h6:`h6`,hr:`hr`,img:`img`,input:`input`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,section:`section`,strong:`strong`,sup:`sup`,table:`table`,tbody:`tbody`,td:`td`,th:`th`,thead:`thead`,tr:`tr`,ul:`ul`,...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(t.h1,{children:`GitHub Flavored Markdown (GFM) Example`}),`
 `,(0,n.jsx)(t.h2,{children:`Table of Contents`}),`
 `,(0,n.jsxs)(t.ul,{children:[`
 `,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`#headings`,children:`Headings`})}),`
@@ -50,17 +50,11 @@ Superscript (HTML): X`,(0,n.jsx)(`sup`,{children:`2`})]}),`
 `,(0,n.jsx)(t.h2,{children:`Lists`}),`
 `,(0,n.jsx)(t.h3,{children:`Unordered List`}),`
 `,(0,n.jsxs)(t.ul,{children:[`
-`,(0,n.jsxs)(t.li,{children:[`
-`,(0,n.jsx)(t.p,{children:`Item A`}),`
-`]}),`
-`,(0,n.jsxs)(t.li,{children:[`
-`,(0,n.jsx)(t.p,{children:`Item B`}),`
+`,(0,n.jsx)(t.li,{children:`Item A`}),`
+`,(0,n.jsxs)(t.li,{children:[`Item B`,`
 `,(0,n.jsxs)(t.ul,{children:[`
-`,(0,n.jsxs)(t.li,{children:[`
-`,(0,n.jsx)(t.p,{children:`Nested Item B1`}),`
-`]}),`
-`,(0,n.jsxs)(t.li,{children:[`
-`,(0,n.jsx)(t.p,{children:`Nested Item B2`}),`
+`,(0,n.jsx)(t.li,{children:`Nested Item B1`}),`
+`,(0,n.jsxs)(t.li,{children:[`Nested Item B2`,`
 `,(0,n.jsxs)(t.ul,{children:[`
 `,(0,n.jsx)(t.li,{children:`Deep Nested Item`}),`
 `]}),`
@@ -123,7 +117,7 @@ npm run dev
 `,(0,n.jsx)(t.p,{children:(0,n.jsx)(t.a,{href:`https://github.com`,children:`GitHub`})}),`
 `,(0,n.jsxs)(t.p,{children:[`Automatic link: `,(0,n.jsx)(t.a,{href:`https://github.com`,children:`https://github.com`})]}),`
 `,(0,n.jsx)(t.p,{children:`Image:`}),`
-`,(0,n.jsx)(t.p,{children:(0,n.jsx)(t.img,{src:`https://via.placeholder.com/150`,alt:`Sample Image`})}),`
+`,(0,n.jsx)(t.p,{children:(0,n.jsx)(t.img,{src:`https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.GPFEY6kfgxbsja6gmrW6rwHaE7%3Fpid%3DApi&f=1&ipt=fdbb5c98ce79779ba16546c435953165e153bd2db8423439bd6cd9fd6f6a0574&ipo=images`,alt:`Sample Image`})}),`
 `,(0,n.jsx)(t.hr,{}),`
 `,(0,n.jsx)(t.h2,{children:`Strikethrough (GFM)`}),`
 `,(0,n.jsx)(t.p,{children:(0,n.jsx)(t.del,{children:`This feature is specific to GFM`})}),`

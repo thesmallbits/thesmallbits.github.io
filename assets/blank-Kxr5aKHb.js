@@ -1,0 +1,1 @@
+import{c as e,l as t}from"./index-DYr0fLg8.js";var n=t(e());function r(e){return(0,n.jsx)(n.Fragment,{})}function i(e={}){let{wrapper:t}=e.components||{};return t?(0,n.jsx)(t,{...e,children:(0,n.jsx)(r,{...e})}):r(e)}export{i as default};

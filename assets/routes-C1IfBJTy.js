@@ -1,0 +1,1 @@
+import{a as e,c as t,l as n,o as r}from"./index-DYr0fLg8.js";var i=e(),a=n(t());function o(){let e=(0,i.c)(1),t;return e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=(0,a.jsx)(`div`,{className:`p-3`,children:(0,a.jsx)(r,{to:`/blogs`,children:`Blogs`})}),e[0]=t):t=e[0],t}export{o as component};
