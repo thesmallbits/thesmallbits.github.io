@@ -1,1 +1,0 @@
-import{c as e}from"./index-QCHN4ao5.js";var t=e();function n(e){return(0,t.jsx)(t.Fragment,{})}function r(e={}){let{wrapper:r}=e.components||{};return r?(0,t.jsx)(r,{...e,children:(0,t.jsx)(n,{...e})}):n(e)}export{r as default};
