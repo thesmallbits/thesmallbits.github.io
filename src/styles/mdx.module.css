@@ -71,7 +71,9 @@
 }
 
 .paragraph {
-  /**/
+    &:has(.image){
+        @apply size-fit;
+    }
 }
 
 .code {
@@ -98,11 +100,13 @@
 }
 
 .image {
-  /**/
+    @apply size-full;
 }
 
 .list {
-  /**/
+    &.list {
+        @apply ml-4;
+    }
 }
 
 .unordered_list {
