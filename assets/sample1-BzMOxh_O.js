@@ -1,4 +1,4 @@
-import{c as e}from"./index-BFw3uwO3.js";var t=e();function n(e){let n={a:`a`,blockquote:`blockquote`,code:`code`,del:`del`,em:`em`,h1:`h1`,h2:`h2`,h3:`h3`,h4:`h4`,h5:`h5`,h6:`h6`,hr:`hr`,img:`img`,input:`input`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,section:`section`,strong:`strong`,sup:`sup`,table:`table`,tbody:`tbody`,td:`td`,th:`th`,thead:`thead`,tr:`tr`,ul:`ul`,...e.components};return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(n.h1,{children:`GitHub Flavored Markdown (GFM) Example`}),`
+import{c as e}from"./index-QCHN4ao5.js";var t=e();function n(e){let n={a:`a`,blockquote:`blockquote`,code:`code`,del:`del`,em:`em`,h1:`h1`,h2:`h2`,h3:`h3`,h4:`h4`,h5:`h5`,h6:`h6`,hr:`hr`,img:`img`,input:`input`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,section:`section`,strong:`strong`,sup:`sup`,table:`table`,tbody:`tbody`,td:`td`,th:`th`,thead:`thead`,tr:`tr`,ul:`ul`,...e.components};return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(n.h1,{children:`GitHub Flavored Markdown (GFM) Example`}),`
 `,(0,t.jsx)(n.h2,{children:`Table of Contents`}),`
 `,(0,t.jsxs)(n.ul,{children:[`
 `,(0,t.jsx)(n.li,{children:(0,t.jsx)(n.a,{href:`#headings`,children:`Headings`})}),`
