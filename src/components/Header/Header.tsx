@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import Menu from "./HeaderMenu";
 
-function HeaderInteractable(props: PropsWithChildren) {
+function HeaderInteractable(props: PropsWithChildren<any>) {
     return (
         <span
             className={cn(
