@@ -21,7 +21,11 @@ export default defineConfig(({mode}) => ({
         },
     },
     plugins: [
-        jassm(),
+        jassm({
+            development: mode !== "production",
+            outputFormat: "program",
+            jsxImportSource:"react"
+        }),
         tailwindcss(),
         tanstackRouter({
             autoCodeSplitting: true,
