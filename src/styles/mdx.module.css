@@ -1,3 +1,7 @@
+:root {
+  --blockquote-color: rgba(56, 148, 196, 0.2);
+}
+
 @reference "tailwindcss";
 .header {
   @apply w-full font-semibold cursor-pointer;
@@ -10,11 +14,14 @@
 .header_button {
   /*@apply mb-2 mt-2;*/
   @apply size-full flex justify-start items-baseline text-start;
-  @apply leading-9;
+  @apply leading-10;
   display: block;
-  pointer-events: none;
+  cursor: pointer;
   border: none;
   font-size: inherit;
+  &:hover {
+    color: var(--color-light-text-secondary);
+  }
 }
 .header_1 {
   font-size: 3em;
@@ -48,6 +55,9 @@
   /*@apply underline hover:decoration-3 decoration-2 decoration-dotted;*/
   border-bottom-style: dotted;
   border-bottom-width: 2px;
+  &:hover {
+    border-bottom-style: solid;
+  }
 }
 
 .button {
@@ -71,9 +81,10 @@
 }
 
 .paragraph {
-    &:has(.image){
-        @apply size-fit;
-    }
+  &:has(.image) {
+    @apply size-fit border-3 rounded;
+    border-color: var(--color-light-border);
+  }
 }
 
 .code {
@@ -83,30 +94,33 @@
 
 .preformatted {
   @apply bg-gray-300;
-  @apply font-mono p-2 rounded border border-gray-400 mb-2;
+  @apply font-mono p-2 rounded border border-gray-400 mb-2 w-fit;
+
   .code {
     @apply bg-inherit border-none p-0;
   }
 }
 
 .blockquote {
-  @apply bg-gray-200;
+  background-color: var(--blockquote-color);
+  border-color: hsl(from var(--blockquote-color) h s calc(l - 60));
   @apply pl-4 p-2 m-1;
-  @apply border-l-4 border-gray-400 rounded border;
+  @apply border-l-4 rounded border;
 }
 
 .horizontal_line {
-  @apply mt-2 mb-2;
+  @apply mt-9 mb-9 border rounded -mx-4;
+  border-color: hsla(from var(--color-light-text-primary) h s l / 50%);
 }
 
 .image {
-    @apply size-full;
+  @apply size-full aspect-auto min-w-80;
 }
 
 .list {
-    &.list {
-        @apply ml-4;
-    }
+  &.list {
+    @apply ml-4;
+  }
 }
 
 .unordered_list {
@@ -122,28 +136,29 @@
 }
 
 .table {
-  @apply bg-gray-200;
-  @apply border border-gray-500 rounded-xl;
+  @apply border-2 rounded;
+  &,
+  * {
+    border-color: var(--color-light-border);
+  }
 }
 
 .table_head {
-  @apply border border-gray-500 rounded-xl;
+  /**/
 }
 
 .table_head_cell {
-  @apply bg-gray-400 p-2;
-  @apply border border-gray-500 rounded-xl;
+  @apply p-1 border-2 text-center;
+  background-color: var(--color-light-secondary);
 }
 
 .table_body {
-  @apply border border-gray-500 rounded-xl;
 }
 
 .table_row {
-  @apply border border-gray-500 rounded-xl;
+  /**/
 }
 
 .table_data {
-  @apply p-2;
-  @apply border border-gray-500 rounded-xl;
+  @apply p-1 border text-center;
 }

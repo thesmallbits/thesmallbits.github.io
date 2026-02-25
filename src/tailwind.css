@@ -21,7 +21,7 @@
     background-image: repeating-linear-gradient(
       -45deg,
       var(--color-light-border) 0,
-      var(--color-light-border) 2px,
+      var(--color-light-border) 1px,
       transparent 0,
       transparent 50%
     );
