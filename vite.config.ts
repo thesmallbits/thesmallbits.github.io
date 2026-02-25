@@ -10,7 +10,7 @@ import jassm from "@d1vij/jassm/plugin";
 
 // https://vite.dev/config/
 export default defineConfig(({mode}) => ({
-    base: mode === "production" ? "/website/" : "/",
+    base: '/',
     server: {
         host: true,
         allowedHosts: true
