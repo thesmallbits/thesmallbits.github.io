@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 import jassm from "@d1vij/jassm/plugin";
-
+import {visualizer} from "rollup-plugin-visualizer"
 
 // https://vite.dev/config/
 export default defineConfig(({mode}) => ({
@@ -14,6 +14,14 @@ export default defineConfig(({mode}) => ({
     server: {
         host: true,
         allowedHosts: true
+    },
+    define: {
+        "NODE_ENV": "'production'"
+    },
+    build: {
+        rolldownOptions: {
+            treeshake: true
+        }
     },
     resolve: {
         alias: {
@@ -25,6 +33,10 @@ export default defineConfig(({mode}) => ({
             development: mode !== "production",
             outputFormat: "program",
             jsxImportSource:"react"
+        }),
+        visualizer({
+            open: false,
+            filename:"dist/stats.html"
         }),
         tailwindcss(),
         tanstackRouter({

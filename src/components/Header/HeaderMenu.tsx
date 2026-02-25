@@ -1,6 +1,7 @@
 import { cn } from "@d1vij/shit-i-always-use";
 import { Link, type LinkProps } from "@tanstack/react-router";
 import { useMemo } from "react";
+
 type ExternalLink = {
     title: string;
     type: "external";
@@ -49,9 +50,10 @@ export default function Menu({ lists }: MenuProps) {
     return (
         <div
             className={cn(
-                "rounded-b-2xl primary-border",
-                "absolute bg-inherit top-full w-[95%] mx-2 min-h-[50dvh] shadow-xs",
-                "p-4 grid",
+                "rounded-b-2xl bg-light-secondary",
+                "border-2 border-t border-light-border",
+                "absolute top-full mx-4 min-h-[60dvh] w-[90%] md:w-[70%] bg-inherit shadow-xs transition-all ",
+                "grid p-4",
             )}
         >
             {elms}

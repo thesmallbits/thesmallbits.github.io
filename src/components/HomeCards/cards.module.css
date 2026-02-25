@@ -1,0 +1,6 @@
+.cards {
+    background-color: var(--color-light-secondary);
+    &:hover {
+        filter: brightness(98%);
+    }
+}

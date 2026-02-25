@@ -1,4 +1,5 @@
 import type { MenuListProps } from "@/components/Header/HeaderMenu";
+
 const RepositoryList: MenuListProps = {
     title: "Content repository",
     links: [
