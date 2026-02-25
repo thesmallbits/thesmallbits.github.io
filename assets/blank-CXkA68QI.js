@@ -1,0 +1,1 @@
+import{d as e,f as t}from"./index-B-YCVRfO.js";var n=t(e());function r(e){return(0,n.jsx)(n.Fragment,{})}function i(e={}){let{wrapper:t}=e.components||{};return t?(0,n.jsx)(t,{...e,children:(0,n.jsx)(r,{...e})}):r(e)}export{i as default};
