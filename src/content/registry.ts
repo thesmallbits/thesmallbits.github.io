@@ -9,8 +9,7 @@ const blogs = generateRegistry({
     source: "/src/assets/mdx/blogs",
     mountOn: "/blogs",
     records: {
-        "/sample1": "/sample1.mdx",
-        "/blank": "/blank.mdx",
+        "/the-beckman-rearrangement": "/Beckmann.mdx",
     },
 });
 
