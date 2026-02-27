@@ -14,7 +14,7 @@
     "lint": "biome check --fix --unsafe && tsc -b"
   },
   "dependencies": {
-    "@d1vij/jassm": "^0.1.9",
+    "@d1vij/jassm": "^0.1.10",
     "@d1vij/shit-i-always-use": "^0.1.4",
     "@tanstack/react-router": "^1.163.2",
     "lucide-react": "^0.575.0",
