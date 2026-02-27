@@ -11,10 +11,12 @@ export default function HomeCards({ title, content }: HomeCardsProps) {
             className={cn(
                 styles.cards,
                 "rounded-xl leading-normal transition-all duration-200 ease-out",
-                "border border-transparent hover:border-light-border hover:shadow-xs active:border-light-border active:shadow overflow-clip",
+                "overflow-clip border border-transparent hover:border-light-border hover:shadow-xs active:border-light-border active:shadow",
             )}
         >
-            <h2 className="trackin font-semibold p-2 pl-5 cool-background-shit border-b border-light-border text-3xl">{title}</h2>
+            <h2 className="trackin cool-background-shit border-light-border border-b p-2 pl-5 font-semibold text-3xl">
+                {title}
+            </h2>
             <p className="p-4 tracking-tight">{content}</p>
         </div>
     );

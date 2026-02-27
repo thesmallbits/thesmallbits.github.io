@@ -76,7 +76,7 @@ export default function Header() {
             </span>
             <h1
                 className={cn(
-                    "mx-auto h-full w-fit place-self-center border-light-border border-x-2 bg-light-secondary px-3 text-lg md:text-4xl lg:text-5xl font-semibold tracking-tighter",
+                    "mx-auto h-full w-fit place-self-center border-light-border border-x-2 bg-light-secondary px-3 font-semibold text-lg tracking-tighter md:text-4xl lg:text-5xl",
                     "grid place-items-center text-center",
                     root && "hidden",
                     // "border-transparent bg-transparent text-transparent size-0",

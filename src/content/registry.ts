@@ -1,4 +1,4 @@
-import { Registry, CoalescedRegistry } from "@d1vij/jassm";
+import { CoalescedRegistry, Registry } from "@d1vij/jassm";
 // holy fuck
 // using "import z from "zod"" increases the bundle size by +200KB 💀
 import { z } from "zod/mini";

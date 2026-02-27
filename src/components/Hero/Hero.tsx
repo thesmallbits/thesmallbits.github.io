@@ -24,14 +24,14 @@ export default function Hero() {
                     >
                         The Small Bits
                     </h1>
-                    <span className="mt-3 font-semibold text-light-text-tertiar text-light-shade-red opacity-80 text-sm md:ml-[50%] md:text-3xl lg:text-4xl">
+                    <span className="mt-3 font-semibold text-light-shade-red text-light-text-tertiar text-sm opacity-80 md:ml-[50%] md:text-3xl lg:text-4xl">
                         /ðəˈsmɔlˌbɪts/
                     </span>
                 </span>
                 <span
                     className={cn(
                         styles.butt,
-                        "mb-10 mt-4 px-8 text-center font-extralight text-lg text-light-text-primary md:mb-30 md:text-3xl lg:text-5xl",
+                        "mt-4 mb-10 px-8 text-center font-extralight text-lg text-light-text-primary md:mb-30 md:text-3xl lg:text-5xl",
                     )}
                 >
                     Providing the small bits of education, for your bigger self.

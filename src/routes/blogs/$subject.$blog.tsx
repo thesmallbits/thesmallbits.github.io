@@ -1,7 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { lazy } from "react";
 import { z } from "zod/mini";
-import registry, { entries, RegistryKeySchema, type RegistryType } from "@/content/registry";
+import registry, { type entries, RegistryKeySchema } from "@/content/registry";
 
 const BlogSlug = lazy(() => import("@/components/Blog/BlogSlug"));
 
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/blogs/$subject/$blog")({
             // throw result.error;
         }
 
-        return { path: path, Component: registry.getComponent(path as typeof entries[number]) };
+        return { path: path, Component: registry.getComponent(path as (typeof entries)[number]) };
     },
     notFoundComponent: ({ data }) => {
         return (

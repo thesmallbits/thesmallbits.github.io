@@ -1,176 +1,176 @@
 @reference "tailwindcss";
 
 :root {
-  --blockquote-color: rgba(from var(--color-light-shade-green) r g b / 20%);
+    --blockquote-color: rgba(from var(--color-light-shade-green) r g b / 20%);
 }
 
 @layer components {
-  .header {
-    @apply w-full font-semibold cursor-pointer;
-    @apply mb-4 mt-4;
-    @apply hover:underline decoration-2;
-    &:active {
-      background-color: var(--color-light-secondary);
+    .header {
+        @apply w-full font-semibold cursor-pointer;
+        @apply mb-4 mt-4;
+        @apply hover:underline decoration-2;
+        &:active {
+            background-color: var(--color-light-secondary);
+        }
     }
-  }
 
-  .header_button {
-    /*@apply mb-2 mt-2;*/
-    @apply size-full flex justify-start items-baseline text-start;
-    @apply leading-14;
-    display: block;
-    cursor: pointer;
-    border: none;
-    font-size: inherit;
+    .header_button {
+        /*@apply mb-2 mt-2;*/
+        @apply size-full flex justify-start items-baseline text-start;
+        @apply leading-14;
+        display: block;
+        cursor: pointer;
+        border: none;
+        font-size: inherit;
 
-    /*uncommment if we ever need the bad looking hyphenation*/
-    /*hyphens: auto;*/
+        /*uncommment if we ever need the bad looking hyphenation*/
+        /*hyphens: auto;*/
 
-    /*and comment this*/
-    overflow-wrap: anywhere;
+        /*and comment this*/
+        overflow-wrap: anywhere;
 
-    &:hover {
-      color: var(--color-light-text-secondary);
+        &:hover {
+            color: var(--color-light-text-secondary);
+        }
     }
-  }
-  .header_1 {
-    font-size: 2.5em;
-  }
-
-  .header_2 {
-    font-size: 2.2em;
-  }
-
-  .header_3 {
-    font-size: 1.875em;
-  }
-
-  .header_4 {
-    font-size: 1.5em;
-  }
-
-  .header_5 {
-    font-size: 1.25em;
-  }
-
-  .header_6 {
-    font-size: 1.125em;
-  }
-
-  .header_icon {
-    /**/
-  }
-
-  .anchor {
-    /*@apply underline hover:decoration-3 decoration-2 decoration-dotted;*/
-    border-bottom-style: dotted;
-    border-bottom-width: 2px;
-    &:hover {
-      border-bottom-style: solid;
+    .header_1 {
+        font-size: 2.5em;
     }
-  }
 
-  .button {
-    /**/
-  }
-
-  .bold {
-    @apply font-bold;
-  }
-
-  .italic {
-    @apply italic;
-  }
-
-  .span {
-  }
-
-  .striked {
-    @apply line-through decoration-1 decoration-wavy;
-  }
-
-  .paragraph {
-    @apply mt-2 mb-2 w-fit;
-    word-break: anywhere;
-    &:has(.image) {
-      /*a*/
+    .header_2 {
+        font-size: 2.2em;
     }
-  }
 
-  .code {
-    @apply border font-mono w-full;
-    @apply p-0 px-1;
-    border-color: var(--color-light-border);
-  }
+    .header_3 {
+        font-size: 1.875em;
+    }
 
-  .preformatted {
-    @apply bg-gray-300;
-    @apply font-mono p-2 rounded border border-gray-400 mb-2 w-full md:w-fit md:pr-40; /*NOTE: if pre overflows check the right padding here 😊*/
+    .header_4 {
+        font-size: 1.5em;
+    }
+
+    .header_5 {
+        font-size: 1.25em;
+    }
+
+    .header_6 {
+        font-size: 1.125em;
+    }
+
+    .header_icon {
+        /**/
+    }
+
+    .anchor {
+        /*@apply underline hover:decoration-3 decoration-2 decoration-dotted;*/
+        border-bottom-style: dotted;
+        border-bottom-width: 2px;
+        &:hover {
+            border-bottom-style: solid;
+        }
+    }
+
+    .button {
+        /**/
+    }
+
+    .bold {
+        @apply font-bold;
+    }
+
+    .italic {
+        @apply italic;
+    }
+
+    .span {
+    }
+
+    .striked {
+        @apply line-through decoration-1 decoration-wavy;
+    }
+
+    .paragraph {
+        @apply mt-2 mb-2 w-fit;
+        word-break: anywhere;
+        &:has(.image) {
+            /*a*/
+        }
+    }
 
     .code {
-      @apply bg-inherit border-none p-0;
+        @apply border font-mono w-full;
+        @apply p-0 px-1;
+        border-color: var(--color-light-border);
     }
-  }
 
-  .blockquote {
-    background-color: var(--blockquote-color);
-    border-color: hsl(from var(--blockquote-color) h s calc(l - 60));
-    @apply pl-4 p-2 m-1;
-    @apply border-l-4 rounded border;
-  }
+    .preformatted {
+        @apply bg-gray-300;
+        @apply font-mono p-2 rounded border border-gray-400 mb-2 w-full md:w-fit md:pr-40; /*NOTE: if pre overflows check the right padding here 😊*/
 
-  .horizontal_line {
-    @apply mt-9 mb-9 border rounded mx-4;
-    border-color: hsla(from var(--color-light-text-primary) h s l / 50%);
-  }
-
-  .image {
-    @apply size-full aspect-auto min-w-80;
-  }
-
-  .list {
-    &.list {
-      @apply ml-4;
+        .code {
+            @apply bg-inherit border-none p-0;
+        }
     }
-  }
 
-  .unordered_list {
-    @apply list-disc;
-  }
-
-  .ordered_list {
-    @apply list-decimal;
-  }
-
-  .list_item {
-    /**/
-  }
-
-  .table {
-    @apply border-2 rounded;
-    &,
-    * {
-      border-color: var(--color-light-border);
+    .blockquote {
+        background-color: var(--blockquote-color);
+        border-color: hsl(from var(--blockquote-color) h s calc(l - 60));
+        @apply pl-4 p-2 m-1;
+        @apply border-l-4 rounded border;
     }
-  }
 
-  .table_head {
-    /**/
-  }
+    .horizontal_line {
+        @apply mt-9 mb-9 border rounded mx-4;
+        border-color: hsla(from var(--color-light-text-primary) h s l / 50%);
+    }
 
-  .table_head_cell {
-    @apply p-1 border-2 text-center;
-    background-color: var(--color-light-secondary);
-  }
+    .image {
+        @apply size-full aspect-auto min-w-80;
+    }
 
-  .table_body {
-  }
+    .list {
+        &.list {
+            @apply ml-4;
+        }
+    }
 
-  .table_row {
-    /**/
-  }
+    .unordered_list {
+        @apply list-disc;
+    }
 
-  .table_data {
-    @apply p-1 border text-center;
-  }
+    .ordered_list {
+        @apply list-decimal;
+    }
+
+    .list_item {
+        /**/
+    }
+
+    .table {
+        @apply border-2 rounded;
+        &,
+        * {
+            border-color: var(--color-light-border);
+        }
+    }
+
+    .table_head {
+        /**/
+    }
+
+    .table_head_cell {
+        @apply p-1 border-2 text-center;
+        background-color: var(--color-light-secondary);
+    }
+
+    .table_body {
+    }
+
+    .table_row {
+        /**/
+    }
+
+    .table_data {
+        @apply p-1 border text-center;
+    }
 }
