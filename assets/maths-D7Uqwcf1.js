@@ -1,0 +1,1 @@
+import{_ as e,f as t,v as n}from"./index-woeTj9h2.js";var r=t(),i=n(e());function a(){let e=(0,r.c)(1),t;return e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=(0,i.jsx)(`div`,{children:`All the maths blogs`}),e[0]=t):t=e[0],t}export{a as component};
