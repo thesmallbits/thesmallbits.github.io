@@ -1,4 +1,4 @@
-import{_ as e,v as t}from"./index-woeTj9h2.js";var n=t(e());function r(e){let t={h1:`h1`,h2:`h2`,h3:`h3`,p:`p`,strong:`strong`,...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(t.h1,{children:`The Beckmann Rearrangement:`}),`
+import{_ as e,v as t}from"./index-NQVzhWai.js";var n=t(e());function r(e){let t={h1:`h1`,h2:`h2`,h3:`h3`,p:`p`,strong:`strong`,...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(t.h1,{children:`The Beckmann Rearrangement:`}),`
 `,(0,n.jsx)(t.h2,{children:`Introduction`}),`
 `,(0,n.jsx)(t.p,{children:`The Beckmann rearrangement named after German Ernst Otto Beckmann is a classic acid-mediated transformation converting oxime into amides. The reaction has significant industrial importance whether in the production of Nylon-6 or the synethesis of paracetamol drug (Hoechst-Celanese).`}),`
 `,(0,n.jsxs)(t.p,{children:[`The reaction provides a key example in the class of  `,(0,n.jsx)(t.strong,{children:`rearrangement reaction involving intramolecular migration with stereochemical control`}),`.`]}),`

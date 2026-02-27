@@ -1,4 +1,4 @@
-import{_ as e,v as t}from"./index-woeTj9h2.js";var n=t(e());const r={author:`Divij Verma`,created_at:`26-02-2026`,modified_at:`27-02-2026`,tags:[`tutorial`,`style guide`,`mdx`]};function i(e){let t={blockquote:`blockquote`,code:`code`,em:`em`,h1:`h1`,h2:`h2`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(t.h1,{children:`Rules and regulations (and features) while writing mdx`}),`
+import{_ as e,v as t}from"./index-NQVzhWai.js";var n=t(e());const r={author:`Divij Verma`,created_at:`26-02-2026`,modified_at:`27-02-2026`,tags:[`tutorial`,`style guide`,`mdx`]};function i(e){let t={blockquote:`blockquote`,code:`code`,em:`em`,h1:`h1`,h2:`h2`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,strong:`strong`,ul:`ul`,...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(t.h1,{children:`Rules and regulations (and features) while writing mdx`}),`
 `,(0,n.jsxs)(t.blockquote,{children:[`
 `,(0,n.jsx)(t.p,{children:`MDX has (almost) all features of normal markdown`}),`
 `]}),`
