@@ -1,8 +1,4 @@
-import {
-    cn,
-    useVibrate,
-    type PropsWithChildren,
-} from "@d1vij/shit-i-always-use";
+import { cn, type PropsWithChildren, useVibrate } from "@d1vij/shit-i-always-use";
 import { Link, type LinkProps, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 
@@ -28,11 +24,7 @@ function HeaderLink({ title, to }: HeaderLinkProps) {
     const vibrator = useVibrate();
     return (
         <HeaderInteractable>
-            <Link
-                className={cn("text-nowrap")}
-                to={to}
-                onClick={() => vibrator(50)}
-            >
+            <Link className={cn("text-nowrap")} to={to} onClick={() => vibrator(50)}>
                 {title}
             </Link>
         </HeaderInteractable>
@@ -50,11 +42,7 @@ function HeaderButton({ title, action }: HeaderButtonProps) {
     }
     return (
         <HeaderInteractable>
-            <button
-                onClick={handleClick}
-                type="button"
-                className="cursor-pointer"
-            >
+            <button onClick={handleClick} type="button" className="cursor-pointer">
                 {title}
             </button>
         </HeaderInteractable>
@@ -88,8 +76,8 @@ export default function Header() {
             </span>
             <h1
                 className={cn(
-                    "mx-auto w-fit place-self-center border-light-border border-x-2 bg-light-secondary px-3 pt-2 text-lg h-full  md:text-4xl lg:text-5xl",
-                    "text-center",
+                    "mx-auto h-full w-fit place-self-center border-light-border border-x-2 bg-light-secondary px-3 text-lg md:text-4xl lg:text-5xl font-semibold tracking-tighter",
+                    "grid place-items-center text-center",
                     root && "hidden",
                     // "border-transparent bg-transparent text-transparent size-0",
                 )}

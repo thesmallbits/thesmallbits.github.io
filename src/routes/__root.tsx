@@ -13,14 +13,9 @@ function RootComponent() {
     return (
         <>
             <HeadContent />
-            <div
-                className={cn(
-                    "min-h-dvh w-dvw",
-                    "grid grid-rows-[auto_1fr_auto]",
-                )}
-            >
+            <div className={cn("min-h-dvh w-dvw", "grid grid-rows-[auto_1fr_auto]")}>
                 <Header />
-                <section className={cn("relative z-20")}>
+                <section className={cn("relative z-20 overflow-hidden")}>
                     <Outlet />
                 </section>
                 <Footer />

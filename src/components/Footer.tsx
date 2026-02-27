@@ -3,12 +3,7 @@ import { Link } from "@tanstack/react-router";
 export default function Footer() {
     const vibrator = useVibrate();
     return (
-        <footer
-            className={cn(
-                "primary-border",
-                "z-10 flex h-fit w-full justify-between px-4 text-center",
-            )}
-        >
+        <footer className={cn("primary-border", "z-10 flex h-fit w-full justify-between px-4 text-center")}>
             <Link
                 to="/"
                 onClick={() => vibrator(50)}

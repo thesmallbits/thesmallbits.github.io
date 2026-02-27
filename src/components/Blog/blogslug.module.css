@@ -1,0 +1,6 @@
+@reference "tailwindcss";
+.mdxContainer {
+    & > :first-child {
+        @apply decoration-dotted decoration-4 underline mb-8;
+    }
+}

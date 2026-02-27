@@ -42,17 +42,14 @@ type MenuProps = {
     lists: MenuListProps[];
 };
 export default function Menu({ lists }: MenuProps) {
-    const elms = useMemo(
-        () => lists.map((l) => <MenuList key={l.title} {...l} />),
-        [lists],
-    );
+    const elms = useMemo(() => lists.map((l) => <MenuList key={l.title} {...l} />), [lists]);
 
     return (
         <div
             className={cn(
                 "rounded-b-2xl bg-light-secondary",
-                "border-2 border-t border-light-border",
-                "absolute top-full mx-4 min-h-[60dvh] w-[90%] md:w-[70%] bg-inherit shadow-xs transition-all ",
+                "border-2 border-light-border border-t",
+                "absolute top-full mx-4 min-h-[60dvh] w-[90%] bg-inherit shadow-xs transition-all md:w-[70%]",
                 "grid p-4",
             )}
         >

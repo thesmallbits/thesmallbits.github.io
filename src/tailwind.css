@@ -1,35 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-    --color-light-text-primary: #5c6a72;
-    --color-light-text-secondary: #606e74;
-    --color-light-text-tertiary: #8f9c8b;
-    --color-light-border: #e0dcc7;
-    --color-light-secondary: #efebd4; /* darker one */
-    --color-light-primary: #fdf6e3; /*lighter one */
+  --color-light-text-primary: #5c6a72;
+  --color-light-text-secondary: #606e74;
+  --color-light-text-tertiary: #8f9c8b;
+  --color-light-border: #e0dcc7;
+  --color-light-secondary: #efebd4; /* darker one */
+  --color-light-primary: #fdf6e3; /*lighter one */
 
-    --font-monospace: "Courier Prime";
-    --font-serifed: "Brawler";
-    --default-font-family: var(--font-monospace);
+  --color-light-shade-green: #38c470;
+  --color-light-shade-blue: rgba(56, 148, 196, 1);
+  --color-light-shade-red: #c45c5e;
+  --color-light-shade-gray: #cccccc;
+  --font-monospace: "JetBrains Mono";
+  --font-serifed: "Brawler";
+  --default-font-family: var(--font-monospace);
 }
 
 @layer components {
-    .primary-border {
-        @apply border border-light-border;
-    }
-    .cool-background-shit {
-        background-image: repeating-linear-gradient(
-            -45deg,
-            var(--color-light-border) 0,
-            var(--color-light-border) 1px,
-            transparent 0,
-            transparent 50%
-        );
-        background-size: 31px 31px;
-        background-color: var(--color-light-secondary);
-    }
+  .primary-border {
+    @apply border border-light-border;
+  }
+  .cool-background-shit {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      var(--color-light-border) 0,
+      var(--color-light-border) 1px,
+      transparent 0,
+      transparent 50%
+    );
+    background-size: 31px 31px;
+    background-color: var(--color-light-secondary);
+  }
 }
 
 *::selection {
-    background-color: rgba(from var(--color-light-text-secondary) r g b / 20%);
+  background-color: rgba(from var(--color-light-text-secondary) r g b / 20%);
+}
+* {
+  scroll-behavior: smooth;
 }

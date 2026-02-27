@@ -18,12 +18,7 @@ function RouteComponent() {
             <Hero />
 
             <section className="mt-20">
-                <div
-                    className={cn(
-                        "mx-auto",
-                        "grid w-[90%] grid-cols-1 gap-8 md:w-[50%] md:grid-cols-2",
-                    )}
-                >
+                <div className={cn("mx-auto", "grid w-[90%] grid-cols-1 gap-8 md:w-[50%] md:grid-cols-2")}>
                     <HomeCards
                         title="Getting Started"
                         content="Learn the fundamentals of the project, including installation steps, required dependencies, environment configuration, and how to run the development server for the first time."
