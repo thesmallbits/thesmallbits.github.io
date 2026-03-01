@@ -1,4 +1,3 @@
-import { cn } from "@d1vij/shit-i-always-use";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { lazy } from "react";
