@@ -17,9 +17,13 @@
     "@d1vij/jassm": "^0.1.10",
     "@d1vij/shit-i-always-use": "^0.1.4",
     "@tanstack/react-router": "^1.163.2",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.9.1",
+    "framer-motion": "^12.34.3",
     "lucide-react": "^0.575.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "tsparticles": "^3.9.1",
     "zod": "^4.3.6"
   },
   "devDependencies": {
