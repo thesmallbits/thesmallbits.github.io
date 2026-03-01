@@ -32,7 +32,7 @@ export default defineConfig(({mode}) => ({
         jassm({
             development: mode !== "production",
             outputFormat: "program",
-            jsxImportSource:"react"
+            jsxImportSource: "react",
         }),
         visualizer({
             open: false,

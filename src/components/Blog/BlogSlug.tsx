@@ -19,7 +19,6 @@ const MetaSchema = z.object({
 const ExportSchema = z.object({
     meta: MetaSchema,
 });
-
 export default function BlogSlug() {
     const { path, Component } = useLoaderData({ from: "/blogs/$subject/$blog" });
     const { meta } = useMemo(() => {
@@ -45,7 +44,7 @@ export default function BlogSlug() {
             </section>
             <div className={cn("p-2 font-serifed")}>
                 <section className={cn(styles.mdxContainer, "w-full p-2 md:w-[80%] lg:pt-10 lg:pl-20")} lang="en">
-                    <MDXFromComponent styles={stylemap} SourceComponent={Component} fallback={<div>Loading</div>} />
+                    <MDXFromComponent styles={stylemap} source={Component} fallback={<div>Loading</div>} />
                 </section>
             </div>
         </div>
