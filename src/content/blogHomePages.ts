@@ -4,15 +4,11 @@ import { type SubjectBlogIndex, SubjectBlogIndexSchema } from "@/schemas";
 const index: SubjectBlogIndex = {
     chemistry: {
         title: "Chemistry",
-        hot_links: [{ url: "/blogs/chemistry/the-beckman-rearrangement" }],
+        hot_links: [{ url: "/blogs/chemistry/beckmann-rearrangement" }],
     },
     maths: {
         title: "Mathematics",
-        hot_links: [
-            {
-                url: "/blogs/maths/the-beckman-rearrangement",
-            },
-        ],
+        hot_links: [],
     },
     physics: {
         title: "Physics",

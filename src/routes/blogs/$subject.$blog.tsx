@@ -22,7 +22,7 @@ export const Route = createFileRoute("/blogs/$subject/$blog")({
         // NOTE: if in future we change the virtual path at
         // registry then this must also be changed
         const path = `/blogs/${params.subject}/${params.blog}`;
-        console.log(path)
+        console.log(path);
         const result = v.safeParse(RegistryKeySchema, path);
         if (!result.success) {
             throw notFound({ data: result });

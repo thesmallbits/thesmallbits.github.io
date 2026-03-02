@@ -12,7 +12,7 @@ export default function BlogSlug() {
     const { Component, exportPromise } = useLoaderData({ from: "/blogs/$subject/$blog" });
     const { meta } = useMemo(() => {
         const exports = use(exportPromise);
-        console.log(exports)
+        console.log(exports);
         const results = v.safeParse(BlogExportSchema, exports);
         if (!results.success) {
             throw results;

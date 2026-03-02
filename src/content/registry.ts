@@ -9,16 +9,14 @@ export const physics = new Registry({
     modules,
     source: "/src/assets/mdx/blogs/physics",
     mountOn: "/blogs/physics",
-    records: {
-    },
+    records: {},
 });
 
 export const maths = new Registry({
     modules,
     source: "/src/assets/mdx/blogs/maths",
     mountOn: "/blogs/maths",
-    records: {
-    },
+    records: {},
 });
 
 export const chemistry = new Registry({
