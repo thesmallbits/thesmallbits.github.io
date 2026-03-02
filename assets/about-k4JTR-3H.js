@@ -1,0 +1,1 @@
+import{_ as e,g as t,u as n}from"./index-DVZQ73co.js";var r=n(),i=e(t());function a(){let e=(0,r.c)(1),t;return e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=(0,i.jsx)(`div`,{children:`Hello "/about"!`}),e[0]=t):t=e[0],t}export{a as component};
