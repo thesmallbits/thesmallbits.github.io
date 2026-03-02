@@ -1,1 +1,0 @@
-import{b as e,d as t,h as n,x as r}from"./index-BQfWmCcH.js";var i=n(),a=r(e());function o(){let e=(0,i.c)(2),{_splat:n}=t.useParams(),r;return e[0]===n?r=e[1]:(r=(0,a.jsxs)(`div`,{children:[n,` not found`]}),e[0]=n,e[1]=r),r}export{o as component};

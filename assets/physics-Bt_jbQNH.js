@@ -1,1 +1,0 @@
-import{b as e,h as t,x as n}from"./index-BQfWmCcH.js";var r=t(),i=n(e());function a(){let e=(0,r.c)(1),t;return e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=(0,i.jsx)(`div`,{children:`All the physics blogs`}),e[0]=t):t=e[0],t}export{a as component};
