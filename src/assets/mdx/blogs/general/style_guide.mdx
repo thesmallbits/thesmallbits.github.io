@@ -1,4 +1,3 @@
-
 export const meta = {
   author: "Divij Verma",
   created_at: "26-02-2026",
@@ -60,41 +59,44 @@ Preview
 
 Since we are using MDX we can import and export any component to and from the .mdx files
 
-
 There are two ways to go about when including custom components
 
 1. Direct imports
-```tsx
-import MyComponent from "@/components/MyComponent"
 
-<MyComponent/>
+```tsx
+import MyComponent from "@/components/MyComponent";
+
+<MyComponent />;
 ```
 
 Example
+
 ```tsx
 import Sample from "@/components/Sample"
 <Sample text={"this is it being directly imported into the mdx file"/> <Sample text={"this is it being directly imported into the mdx file"/>
 ```
 
-import Sample from "@/components/Sample"
-
-<Sample text={"this is it being directly imported into the mdx file"}/>
-
-2. We define it globally by adding it to the global `Elements` map object
-    - Goto _/src/content/registry.ts_
-    - Import and add the element component to the object passed to `generateElementsFrom` function, and then directly reference that component here
-
-```tsx
-import {generateElementsFrom} from "@d1vij/jassm";
 import Sample from "@/components/Sample";
 
-export const Elements = generateElementsFrom({
+<Sample text={"this is it being directly imported into the mdx file"} />
+
+2. We define it globally by adding it to the global `Elements` map object
+   - Goto _/src/content/registry.ts_
+   - Import and add the element component to the object passed to `generateElementsFrom` function, and then directly reference that component here
+
+```tsx
+import { generateElementsFrom } from "@d1vij/jassm";
+import Sample from "@/components/Sample";
+
+export const Elements = generateElementsFrom(
+  {
     Sample, // this will automatically be injecting in all mdx files
-}, true);
+  },
+  true,
+);
 ```
 
 > the build step **WONT FAIL** if the compiler is unable to resolve the component at build time, instead it would fail at runtime
-
 
 ## Embedding js
 
@@ -113,7 +115,8 @@ import {value} from "@/components/Sample"
 
 Imported value is {value}
 ```
-import {value} from "@/components/Sample"
+
+import { value } from "@/components/Sample";
 
 Imported value is {value}
 
@@ -132,16 +135,12 @@ ComponentFromMdx
 <ComponentFromMdx/>
 ```
 
-import {
-valueFromMDX,
-ComponentFromMdx
-} from "@/assets/mdx/export_sample.mdx";
+import { valueFromMDX, ComponentFromMdx } from "@/assets/mdx/export_sample.mdx";
 
 {valueFromMDX}
 
-<br/>
-<ComponentFromMdx/>
-
+<br />
+<ComponentFromMdx />
 
 2. Exporting something from mdx file into React files
 
@@ -151,8 +150,8 @@ Components and variables can be imported from mdx files in two ways
 
 ```ts
 import {
-valueFromMDX,
-ComponentFromMdx
+  valueFromMDX,
+  ComponentFromMdx,
 } from "@/assets/mdx/blogs/export_sample.mdx";
 
 console.log(valueFromMDX);
@@ -160,21 +159,118 @@ console.log(valueFromMDX);
 
 2. Using the `registry.getExport()` method if the file is registered in in the registry (see [working with registry](#working-with-registry))
 
-
 ```ts
 import {registry} from "@/content/registry";
-const exports = 
+const exports =
 ```
 
 ## Working with registry
 
+The "registry" is at its core a mapping of virtual paths to real path of .mdx files
 
+### 0. Create a `module` object from the source directory
+
+The object returned by `import.meta.glob` consists of all the files matching a specific pattern.
+
+```ts
+const modules = import.meta.glob("/src/assets/mdx/**/*.mdx");
+```
+
+### 1. Generating a registry
+
+the Registry class constructor takes in the following things
+
+1. The `module` object returned by import.meta.glob
+2. The `source` folder
+3. The virtual path (`mountOn`) on which the files will be mounted
+4. A `records` object containing map between virtual name and the path of target file relative to the `source` folder
+
+For example, if the directory structure is like this
+
+```
+src/
+├── assets
+│   └── mdx
+│       ├── blogs
+│       │   ├── chemistry
+│       │   │   └── BeckmanRearrangement.mdx
+│       │   │   └── BeckmanRearrangement.mdx
+│       │   ├── ├── physical
+│       │   │   │  └── Electrochemistry.mdx
+│       │   ├── maths
+│       │   │   └── IndefiniteIntegration.mdx
+│       │   ├── physics
+│       │   │   └── Electrostatics.mdx
+│       │   └── info.mdx
+```
+
+Then the process of creating registries would be
+
+```ts
+import { Registry } from "@d1vij/jassm";
+
+// glob all the mdx files inside the /src/assets/mdx folder and its decendents
+const modules = import.meta.glob("/src/assets/mdx/**/*.mdx");
+
+const chemistry = new Registry({
+  modules,
+  source: "/chemistry", // root folder becomes the /src/assets/mdx/chemistry folder
+  mountOn: "/blogs/chemistry", // All records will be prefixed by this path
+  records: {
+    "/beckmann-rearrangement": "/BeckmanRearrangement.mdx",
+    "/electrochemistry": "/physical/Electrochemistry.mdx", // /src/assets/mdx/chemistry/physical/electrochemistry
+  },
+});
+
+// similarly create maths and physics registries
+
+// create a CoalescedRegistry which is a union of all the registries
+const registry = new CoalescedRegistry(chemistry, maths, physics);
+```
+
+### 2. Accessing components and Exports
+
+Once a registry is defined, it can be exported to any other file or component and its corresponding MDX component and exports can be used via
+
+1. `.getComponent(vpath)` method - Returns the lazy loaded component from the virtual path (virtual path is `mountOn` + `/` + `virtual name`)
+2. `.getExport(vpath)` method - Returns the exported module object the virtual path (virtual path is `mountOn` + `/` + `virtual name`)
+
+```tsx
+// import the component loader
+import { MDXFromComponent } from "@d1vij/jassm";
+// import the Elements
+import { Elements } from "@/elements";
+// import the stylemap
+import { stylemap } from "@/stylemap";
+// import the registry
+import { registry } from "@/registry";
+// use this Component wrapped inside a Suspense to provider better UX
+function Foo() {
+  // using the `use()` hook to resolve the import promise
+  const exports = use(registry.getExport("/blogs/chemistry/electrochemistry"));
+  const Component = exports.default;
+  // or else
+  const Component = registry.getComponent("/blogs/chemistry/electrochemistry");
+
+  return (
+    <div>
+      {/* you should validate the exported object at runtime via some validation lib like zod or valibot */}
+      {exports.meta.title}
+      <MDXFromComponent
+        source={Component}
+        elements={Elements}
+        styles={stylemap}
+      />
+    </div>
+  );
+}
+```
 
 ## Blog Metadata
 
 Each blog **must** export a metadata object. The schema for which is present at `/src/schemas/BlogExportSchema.ts`
 
-Example 
+Example
 
 ```ts
 export const meta = {
