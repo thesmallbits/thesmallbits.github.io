@@ -12,13 +12,10 @@ export const Route = createFileRoute("/blogs/$subject/$blog")({
     component: BlogSlug,
     params: {
         parse({ blog, subject }) {
-            console.log('h')
-            const r = {
+            return {
                 blog: v.parse(BlogPathSchema, blog),
                 subject: v.parse(ValidSubjectSchema, subject),
             };
-            console.log('a')
-            return r;
         },
     },
     loader: ({ params }) => {
