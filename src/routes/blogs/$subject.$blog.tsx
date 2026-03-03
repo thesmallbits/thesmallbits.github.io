@@ -40,7 +40,7 @@ export const Route = createFileRoute("/blogs/$subject/$blog")({
         return (
             <div>
                 <p>Blog not found</p>
-                <div className="w-[40%] text-wrap">{String(data)}</div>
+                <div className="w-[40%] text-wrap">{JSON.stringify(data)}</div>
             </div>
         );
     },

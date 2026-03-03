@@ -33,7 +33,7 @@ export default function BlogSlug() {
             </section>
             <div className={cn("p-2 font-serifed")}>
                 <section
-                    className={cn(styles.mdxContainer, "grid w-full grid-cols-1 p-2 md:w-[80%] lg:pt-10 lg:pl-20")}
+                    className={cn(styles.mdxContainer, "grid w-full grid-cols-1 p-2 md:w-[70%] lg:pt-10 lg:pl-30")}
                     lang="en"
                 >
                     <MDXFromComponent

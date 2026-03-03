@@ -1,10 +1,13 @@
-import Image from "@/components/MDXImage";
 import { CoalescedRegistry, generateElementsFrom, Registry } from "@d1vij/jassm";
 import * as v from "valibot";
+import Image from "@/components/MDXImage";
 
-export const Elements = generateElementsFrom({
-    Image,
-}, true);
+export const Elements = generateElementsFrom(
+    {
+        Image,
+    },
+    true,
+);
 
 const modules = import.meta.glob("/src/assets/mdx/**/*.mdx");
 

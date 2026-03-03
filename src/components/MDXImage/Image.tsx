@@ -1,9 +1,10 @@
 import { cn } from "@d1vij/shit-i-always-use";
+
 type ImageProps = {
     src: string;
     alt: string;
     widthRem?: number;
-    vertCenter?: boolean;
+    center?: boolean;
     twStyles?: string;
 };
 
@@ -16,17 +17,17 @@ type ImageProps = {
  * // Width of image then when the screen is post the medium breakpoint. Image is always with width 100% for small screens
  *  widthRem={20}
  * // Whether vertically center the image, default is false
- * vertCenter={true}
+ * center={true}
  * // Any additional tailwind styles to include
  * twStyles="border border-red-300"
  * />
  */
-export default function Image({ alt, src, widthRem = 30, vertCenter, twStyles }: ImageProps) {
+export default function Image({ alt, src, widthRem = 30, center, twStyles }: ImageProps) {
     return (
         <img
             alt={alt}
             src={src}
-            className={cn("w-full md:w-(--img-md-width)", vertCenter && "mx-auto", twStyles)}
+            className={cn("w-full md:w-(--img-md-width)", center && "mx-auto", twStyles)}
             style={
                 {
                     "--img-md-width": `min(100%,${widthRem}rem)`,
