@@ -18,7 +18,7 @@
     }
 }
 
-.heroTitle{
+.heroTitle {
     font-weight: 600;
     font-size: 3rem;
     line-height: 1.05;
@@ -34,7 +34,7 @@
     }
 }
 
-.heroSubtitle{
+.heroSubtitle {
     max-width: 42rem;
     margin: 2rem auto 0;
     font-size: 1.125rem;
@@ -46,7 +46,7 @@
     animation-delay: 0.3s;
 }
 
-.heroButtons{
+.heroButtons {
     margin-top: 3rem;
     display: flex;
     justify-content: center;
@@ -57,18 +57,18 @@
     animation-delay: 0.6s;
 }
 
-.primaryButton{
+.primaryButton {
     border-radius: 0.75rem;
     background: black;
     padding: 0.75rem 1.75rem;
     color: white;
     transition: background 0.3s ease;
-    &:hover{
+    &:hover {
         background: #1f2937;
     }
 }
 
-.secondaryButton{
+.secondaryButton {
     border-radius: 0.75rem;
     border: 1px solid black;
     padding: 0.75rem 1.75rem;
