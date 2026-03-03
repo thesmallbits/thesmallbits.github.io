@@ -1,3 +1,4 @@
+import styles from "./index.module.css";
 import { cn } from "@d1vij/shit-i-always-use";
 import { createFileRoute } from "@tanstack/react-router";
 import { lazy } from "react";
@@ -21,7 +22,7 @@ export default function RouteComponent() {
             className={cn(
                 "cool-background-shit bg-light-primary",
                 "grid min-h-screen grid-cols-1",
-                "w-full md:w-[90dvw",
+                "w-full",
                 "grid, grid-cols-1 place-items-center px-10",
                 "relative",
             )}
@@ -31,32 +32,48 @@ export default function RouteComponent() {
 
             <div className="max-w-4xl rounded-4xl bg-light-secondary text-center shadow">
                 {/* Heading */}
-                <h1 className="hero-title rounded font-semibold text-5xl leading-[1.05] tracking-tight md:text-7xl">
+                <h1
+                    className={cn(
+                        styles.heroTitle,
+                        "rounded font-semibold text-5xl leading-[1.05] tracking-tight md:text-7xl",
+                    )}
+                >
                     Science <span className="text-gray-400">Beyond</span> Textbooks
                 </h1>
 
                 {/* Subheading */}
-                <p className="hero-subtitle mx-auto mt-8 max-w-2xl text-gray-500 text-lg leading-relaxed md:text-xl">
+                <p
+                    className={cn(
+                        styles.heroSubtitle,
+                        "mx-auto mt-8 max-w-2xl text-gray-500 text-lg leading-relaxed md:text-xl",
+                    )}
+                >
                     Smallbits provides its users the perfect learning space for the learners of science and providing an
                     interactive test environment to analyze, learn and improve.
                 </p>
 
                 {/* Buttons */}
-                <div className="hero-btns mt-12 flex justify-center gap-6">
+                <div className={cn(styles.heroButtons, "mt-12 flex justify-center gap-6")}>
                     <button
                         type="button"
                         onClick={() => {
                             const section = document.getElementById("recent");
                             section?.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="primary-btn rounded-xl bg-black px-7 py-3 text-white transition hover:bg-gray-800"
+                        className={cn(
+                            styles.primaryButton,
+                            "rounded-xl bg-black px-7 py-3 text-white transition hover:bg-gray-800",
+                        )}
                     >
                         Explore Writing
                     </button>
 
                     <button
                         type="button"
-                        className="sec-btn rounded-xl border border-black px-7 py-3 transition hover:bg-black hover:text-white"
+                        className={cn(
+                            styles.secondaryButton,
+                            "rounded-xl border border-black px-7 py-3 transition hover:bg-black hover:text-white",
+                        )}
                     >
                         Generate from PDF
                     </button>
