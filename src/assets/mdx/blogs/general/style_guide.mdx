@@ -27,27 +27,26 @@ export const meta = {
 1. **Bold** `**Bold**`
 2. _italics_ `_italics_`
 3. ~striked~ `~striked~`
-4. `inline code` \`inline code\`
+4. `inline code` `` `inline` ``
 5. Code blocks
 
 ````
 ```<language>
 <code>
 ```
-
+````
 
 ```py
-<code>
 for i in range(10):
     print("hello")
 ```
-````
 
 6. Tables - normally
 
 ## Embedding images
 
 - Save images in `/public/images` folder and reference them here using `/images/<image name>`
+- Or alternatively use the `<Image/>` component (defined [here](https://github.com/thesmallbits/thesmallbits.github.io/blob/main/src/components/MDXImage/Image.tsx))
 - DO NOT directly use the `<img/>` tag to embed images since they wont get styled automatically
 
 `![BFOP](/images/BFOP.png)`
