@@ -31,31 +31,25 @@ export default function RouteComponent() {
 
             <div className="max-w-4xl rounded-4xl bg-light-secondary text-center shadow">
                 {/* Heading */}
-                <h1
-                    className="rounded font-semibold text-5xl leading-[1.05] tracking-tight md:text-7xl hero-title"
-                >
+                <h1 className="hero-title rounded font-semibold text-5xl leading-[1.05] tracking-tight md:text-7xl">
                     Science <span className="text-gray-400">Beyond</span> Textbooks
                 </h1>
 
                 {/* Subheading */}
-                <p
-                    className="mx-auto mt-8 max-w-2xl text-gray-500 text-lg leading-relaxed md:text-xl hero-subtitle"
-                >
+                <p className="hero-subtitle mx-auto mt-8 max-w-2xl text-gray-500 text-lg leading-relaxed md:text-xl">
                     Smallbits provides its users the perfect learning space for the learners of science and providing an
                     interactive test environment to analyze, learn and improve.
                 </p>
 
                 {/* Buttons */}
-                <div
-                    className="mt-12 flex justify-center gap-6 hero-btns"
-                >
+                <div className="hero-btns mt-12 flex justify-center gap-6">
                     <button
                         type="button"
                         onClick={() => {
                             const section = document.getElementById("recent");
                             section?.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="rounded-xl bg-black px-7 py-3 text-white transition hover:bg-gray-800 primary-btn"
+                        className="primary-btn rounded-xl bg-black px-7 py-3 text-white transition hover:bg-gray-800"
                     >
                         Explore Writing
                     </button>
