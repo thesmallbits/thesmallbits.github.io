@@ -1,4 +1,7 @@
-import{_ as e,g as t}from"./index-BzolOzNe.js";var n=e(t());const r={author:`Ayush Banerjee`,created_at:`22-02-2026`,modified_at:`02-03-2026`,tags:[`chemistry`,`beckmann rearrangement`,`organic`]};function i(e){let t={a:`a`,br:`br`,em:`em`,h1:`h1`,h2:`h2`,h3:`h3`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,strong:`strong`,...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(t.h1,{children:`The Beckmann Rearrangement:`}),`
+import{_ as e,g as t}from"./index-DK47URfJ.js";var n=e(t());const r={author:`Ayush Banerjee`,created_at:`22-02-2026`,modified_at:`02-03-2026`,tags:[`chemistry`,`beckmann rearrangement`,`organic`]};function i(e){let t={a:`a`,em:`em`,h1:`h1`,h2:`h2`,h3:`h3`,hr:`hr`,li:`li`,ol:`ol`,p:`p`,strong:`strong`,...e.components},{Image:r}=t;return r||o(`Image`,!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(t.h1,{children:`The Beckmann Rearrangement:`}),`
+`,(0,n.jsx)(t.h1,{children:`IMAGE SHOULD BE AFTER THIS`}),`
+`,(0,n.jsx)(r,{src:`https://upload.wikimedia.org/wikipedia/commons/e/eb/BeckmannRearrangement3.svg`,widthRem:40,vertCenter:!0,twStyles:`outline outline-red-300`}),`
+`,(0,n.jsx)(t.h1,{children:`IMAGE SHOULD BE BEFORE THIS`}),`
 `,(0,n.jsx)(t.h2,{children:`Introduction`}),`
 `,(0,n.jsxs)(t.p,{children:[`The Beckmann rearrangement named after German Ernst Otto Beckmann is a classic acid-mediated transformation converting oxime into amides. The reaction has significant industrial importance such as the production of Nylon-6 or synethesis of paracetamol drug `,(0,n.jsx)(t.em,{children:`(Hoechst-Celanese)`}),`.`]}),`
 `,(0,n.jsxs)(t.p,{children:[`The reaction provides a key example in the `,(0,n.jsx)(t.strong,{children:`class of rearrangement reaction involving intramolecular migration with stereochemical control`}),`.`]}),`
@@ -27,22 +30,24 @@ and safely speaking it's always the group anti to -OH which migrates `,(0,n.jsx)
 `,(0,n.jsx)(`img`,{src:`images/beckmann/ex1.png`,alt:`ex1`,width:`50%`}),`
 `,(0,n.jsx)(`br`,{}),`
 `,(0,n.jsx)(`img`,{src:`images/beckmann/ex4.png`,alt:`ex4`,width:`50%`}),`
-`,(0,n.jsxs)(t.p,{children:[(0,n.jsx)(t.em,{children:`R. F. Brown, N. M. van Gulick, and G. H. Schmid, J. Am. Chem. Soc., 77, 1094 (1955).`}),(0,n.jsx)(t.br,{}),`
-`,(0,n.jsx)(t.em,{children:`The opposite regioisomer from migration of the phenyl group was observed using HCl in acetic acid.`})]}),`
+`,(0,n.jsxs)(t.p,{children:[(0,n.jsx)(t.em,{children:`R. F. Brown, N. M. van Gulick, and G. H. Schmid, J. Am. Chem. Soc., 77, 1094
+(1955).`}),`\\ `,(0,n.jsx)(t.em,{children:`The opposite regioisomer from migration of the phenyl group was
+observed using HCl in acetic acid.`})]}),`
 `,(0,n.jsx)(`br`,{}),`
 `,(0,n.jsx)(`img`,{src:`images/beckmann/ex3.png`,alt:`ex3`,width:`50%`}),`
 `,(0,n.jsx)(t.p,{children:(0,n.jsx)(t.em,{children:`R. A. Barnes and M. T. Beachem, J. Am. Chem. Soc., 77, 5388 (1955).`})}),`
 `,(0,n.jsx)(t.p,{children:(0,n.jsx)(t.strong,{children:`b. Intermediate`})}),`
 `,(0,n.jsx)(`img`,{src:`images/beckmann/ex2.png`,alt:`ex2`,width:`50%`}),`
-`,(0,n.jsxs)(t.p,{children:[(0,n.jsx)(t.em,{children:`R. K. Hill and O. T. Chortyk, J. Am. Chem. Soc., 84, 1064 (1962).`}),(0,n.jsx)(t.br,{}),`
-`,(0,n.jsx)(t.em,{children:`Use of benzenesulfonate led to retention. When reaction was done in H2SO4, trans isomer was formed as result of fragmentation.`})]}),`
+`,(0,n.jsxs)(t.p,{children:[(0,n.jsx)(t.em,{children:`R. K. Hill and O. T. Chortyk, J. Am. Chem. Soc., 84, 1064 (1962).`}),`\\ `,(0,n.jsx)(t.em,{children:`Use of
+benzenesulfonate led to retention. When reaction was done in H2SO4, trans isomer
+was formed as result of fragmentation.`})]}),`
 `,(0,n.jsx)(t.p,{children:(0,n.jsx)(t.strong,{children:`c. Advanced`})}),`
 `,(0,n.jsx)(`img`,{src:`images/beckmann/ex5.png`,alt:`ex5`,width:`50%`}),`
 `,(0,n.jsx)(t.p,{children:(0,n.jsx)(t.em,{children:`N. S. Mani, M. Wu, Tetrahedron: Asymmetry 2000, 11, 4687.`})}),`
 `,(0,n.jsx)(`br`,{}),`
 `,(0,n.jsx)(`img`,{src:`images/beckmann/ex6.png`,alt:`ex6`,width:`50%`}),`
-`,(0,n.jsxs)(t.p,{children:[(0,n.jsx)(t.em,{children:`J. D. White, Y. Choi, Org. Lett. 2000, 2, 2373.`}),(0,n.jsx)(t.br,{}),`
-`,(0,n.jsx)(t.em,{children:`Both enantiomers of Ibogamine reduce rate of self administration of cocaine and morphine in rats`})]}),`
+`,(0,n.jsxs)(t.p,{children:[(0,n.jsx)(t.em,{children:`J. D. White, Y. Choi, Org. Lett. 2000, 2, 2373.`}),`\\ `,(0,n.jsx)(t.em,{children:`Both enantiomers of
+Ibogamine reduce rate of self administration of cocaine and morphine in rats`})]}),`
 `,(0,n.jsx)(t.h3,{children:`References`}),`
 `,(0,n.jsxs)(t.ol,{children:[`
 `,(0,n.jsx)(t.li,{children:`Jonathan Clayden, Nick Greeves, Stuart Warren. Organic Chemistry. Oxford, 2012.`}),`
@@ -56,4 +61,4 @@ and safely speaking it's always the group anti to -OH which migrates `,(0,n.jsx)
 `,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`https://en.wikipedia.org/wiki/Beckmann_rearrangement`,children:`https://en.wikipedia.org/wiki/Beckmann_rearrangement`})}),`
 `,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`https://www.masterorganicchemistry.com/reaction-guide/beckmann-rearrangement/`,children:`https://www.masterorganicchemistry.com/reaction-guide/beckmann-rearrangement/`})}),`
 `,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`https://snyder-group.uchicago.edu/downloads/Lectures2020/Rearrangements.pdf`,children:`https://snyder-group.uchicago.edu/downloads/Lectures2020/Rearrangements.pdf`})}),`
-`]})]})}function a(e={}){let{wrapper:t}=e.components||{};return t?(0,n.jsx)(t,{...e,children:(0,n.jsx)(i,{...e})}):i(e)}export{a as default,r as meta};
+`]})]})}function a(e={}){let{wrapper:t}=e.components||{};return t?(0,n.jsx)(t,{...e,children:(0,n.jsx)(i,{...e})}):i(e)}function o(e,t){throw Error(`Expected `+(t?`component`:`object`)+" `"+e+"` to be defined: you likely forgot to import, pass, or provide it.")}export{a as default,r as meta};
