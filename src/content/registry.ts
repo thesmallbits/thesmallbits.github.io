@@ -37,7 +37,7 @@ export const chemistry = new Registry({
     },
 });
 
-const general = new Registry({
+export const general = new Registry({
     modules,
     source: "/src/assets/mdx/blogs/general",
     mountOn: "/blogs/general",

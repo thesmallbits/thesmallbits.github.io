@@ -1,0 +1,5 @@
+.subjectTitle {
+    /*background-color: red;*/
+    -webkit-text-stroke: 3px var(--color-light-border);
+    color: var(--color-light-secondary);
+}

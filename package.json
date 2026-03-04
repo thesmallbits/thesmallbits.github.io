@@ -17,7 +17,7 @@
     },
     "dependencies": {
         "@d1vij/jassm": "^0.1.17",
-        "@d1vij/shit-i-always-use": "^0.1.4",
+        "@d1vij/shit-i-always-use": "^0.1.7",
         "@tanstack/react-router": "^1.163.3",
         "@tsparticles/react": "^3.0.0",
         "@tsparticles/slim": "^3.9.1",

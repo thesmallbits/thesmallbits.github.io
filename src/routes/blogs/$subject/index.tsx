@@ -6,6 +6,8 @@ import { ValidSubjectSchema } from "@/schemas";
 
 const SubjectHome = lazy(() => import("@/components/SubjectHome"));
 
+import { subjectPageIndex } from "@/content/blogHomePages";
+
 export const Route = createFileRoute("/blogs/$subject/")({
     component: SubjectHome,
     params: {
@@ -15,17 +17,7 @@ export const Route = createFileRoute("/blogs/$subject/")({
             };
         },
     },
-    async loader({ params: { subject } }) {
-        switch (subject) {
-            case "chemistry":
-            case "physics":
-            case "maths":
-            case "general":
-                break;
-            default:
-                // it should be exhaustive
-                subject satisfies never;
-        }
-        return subject;
+    loader({ params: { subject } }) {
+        return subjectPageIndex[subject];
     },
 });
