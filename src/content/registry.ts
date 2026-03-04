@@ -31,6 +31,7 @@ export const chemistry = new Registry({
     mountOn: "/blogs/chemistry",
     records: {
         "/beckmann-rearrangement": "/BeckmannRearrangement.mdx",
+        "/fischer-indole-synthesis": "/FischerIndoleSynthesis.mdx",
     },
 });
 
