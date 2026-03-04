@@ -4,9 +4,13 @@
     transform: scaleY(0);
     transform-origin: top left;
     opacity: 0;
+
+    /*idt it matters much*/
+    --transition-curve: cubic-bezier(0.55, 0, 1, 0.45);
+
     transition:
-        transform 200ms ease-out,
-        opacity 200ms ease-out;
+        transform 200ms var(--transition-curve),
+        opacity 200ms var(--transition-curve);
 
     overflow: hidden;
 
@@ -14,8 +18,8 @@
     @media (min-width: 40rem) {
         & {
             transition:
-                transform 100ms ease-out,
-                opacity 100ms ease-out;
+                transform 200ms var(--transition-curve),
+                opacity 100ms var(--transition-curve);
         }
     }
 
@@ -23,4 +27,12 @@
         opacity: 1;
         transform: scaleY(1);
     }
+}
+
+.ribbon {
+    background-color: var(--color-light-shade-red);
+    mask-image: url(Ribbon.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: bottom;
 }

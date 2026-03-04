@@ -61,11 +61,20 @@ export default function Menu({ lists, menuButtonRef }: MenuProps) {
                 "rounded-b-2xl bg-light-secondary shadow",
                 "absolute top-full mx-4",
                 "border-2 border-light-border border-t",
-                "grid min-h-[60dvh] w-[90%] p-4 md:w-[70%]",
+                "grid grid-cols-[1fr_auto]",
+                "min-h-[60dvh] w-[90%] p-4 md:w-[70%]",
                 isOpen && styles.open,
             )}
         >
-            {elms}
+            <div>{elms}</div>
+
+            {/*ribbon*/}
+            <div className="relative h-[90%] w-10 shadow-xl">
+                <div className="absolute inset-0 -mt-5 size-full bg-light-shade-red">
+                    <div className="mx-auto mt-1 size-3 rounded-3xl bg-light-text-bg"></div>
+                </div>
+                <div className={cn(styles.ribbon, "absolute bottom-0 left-0 aspect-square w-full translate-y-2")}></div>
+            </div>
         </div>
     );
 }
