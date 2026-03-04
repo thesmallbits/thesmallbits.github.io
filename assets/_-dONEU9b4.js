@@ -1,0 +1,1 @@
+import{_ as e,g as t,o as n,u as r}from"./index-CVlWRymJ.js";var i=r(),a=e(t());function o(){let e=(0,i.c)(2),{_splat:t}=n.useParams(),r;return e[0]===t?r=e[1]:(r=(0,a.jsxs)(`div`,{children:[t,` not found`]}),e[0]=t,e[1]=r),r}export{o as component};
