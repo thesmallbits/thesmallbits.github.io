@@ -1,4 +1,5 @@
-import{_ as e,g as t}from"./index-CVlWRymJ.js";var n=e(t());function r(e){let t={a:`a`,blockquote:`blockquote`,code:`code`,del:`del`,em:`em`,h1:`h1`,h2:`h2`,h3:`h3`,h4:`h4`,h5:`h5`,h6:`h6`,hr:`hr`,img:`img`,input:`input`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,section:`section`,strong:`strong`,sup:`sup`,table:`table`,tbody:`tbody`,td:`td`,th:`th`,thead:`thead`,tr:`tr`,ul:`ul`,...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(t.h1,{children:`GitHub Flavored Markdown (GFM) Example`}),`
+import{_ as e,v as t}from"./index-E2M-M2hv.js";var n=t(e());const r={author:`divij verma`,created_at:`01-01-2001`,modified_at:`01-01-2001`,tags:[]};function i(e){let t={a:`a`,blockquote:`blockquote`,code:`code`,del:`del`,em:`em`,h1:`h1`,h2:`h2`,h3:`h3`,h4:`h4`,h5:`h5`,h6:`h6`,hr:`hr`,img:`img`,input:`input`,li:`li`,ol:`ol`,p:`p`,pre:`pre`,section:`section`,strong:`strong`,sup:`sup`,table:`table`,tbody:`tbody`,td:`td`,th:`th`,thead:`thead`,tr:`tr`,ul:`ul`,...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(t.h1,{children:`GitHub Flavored Markdown (GFM) Example`}),`
+`,(0,n.jsxs)(t.table,{children:[(0,n.jsx)(t.thead,{children:(0,n.jsxs)(t.tr,{children:[(0,n.jsx)(t.th,{children:`Name`}),(0,n.jsx)(t.th,{children:`Age`}),(0,n.jsx)(t.th,{children:`Role`})]})}),(0,n.jsxs)(t.tbody,{children:[(0,n.jsxs)(t.tr,{children:[(0,n.jsx)(t.td,{children:`Alice`}),(0,n.jsx)(t.td,{children:`24`}),(0,n.jsx)(t.td,{children:`Developer`})]}),(0,n.jsxs)(t.tr,{children:[(0,n.jsx)(t.td,{children:`Bob`}),(0,n.jsx)(t.td,{children:`29`}),(0,n.jsx)(t.td,{children:`Designer`})]}),(0,n.jsxs)(t.tr,{children:[(0,n.jsx)(t.td,{children:`Carol`}),(0,n.jsx)(t.td,{children:`31`}),(0,n.jsx)(t.td,{children:`Manager`})]})]})]}),`
 `,(0,n.jsx)(t.h2,{children:`Table of Contents`}),`
 `,(0,n.jsxs)(t.ul,{children:[`
 `,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`#headings`,children:`Headings`})}),`
@@ -8,7 +9,7 @@ import{_ as e,g as t}from"./index-CVlWRymJ.js";var n=e(t());function r(e){let t=
 `,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`#task-lists`,children:`Task Lists`})}),`
 `,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`#code`,children:`Code`})}),`
 `,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`#tables`,children:`Tables`})}),`
-`,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`#links--images`,children:`Links & Images`})}),`
+`,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`#links-images`,children:`Links & Images`})}),`
 `,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`#strikethrough`,children:`Strikethrough`})}),`
 `,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`#autolinks`,children:`Autolinks`})}),`
 `,(0,n.jsx)(t.li,{children:(0,n.jsx)(t.a,{href:`#footnotes`,children:`Footnotes`})}),`
@@ -181,4 +182,4 @@ npm run dev
 `,(0,n.jsxs)(t.p,{children:[`This is the footnote content. `,(0,n.jsx)(t.a,{href:`#user-content-fnref-1`,"data-footnote-backref":``,"aria-label":`Back to reference 1`,className:`data-footnote-backref`,children:`↩`})]}),`
 `]}),`
 `]}),`
-`]})]})}function i(e={}){let{wrapper:t}=e.components||{};return t?(0,n.jsx)(t,{...e,children:(0,n.jsx)(r,{...e})}):r(e)}export{i as default};
+`]})]})}function a(e={}){let{wrapper:t}=e.components||{};return t?(0,n.jsx)(t,{...e,children:(0,n.jsx)(i,{...e})}):i(e)}export{a as default,r as meta};

@@ -1,0 +1,1 @@
+import{_ as e,d as t,s as n,v as r}from"./index-E2M-M2hv.js";var i=t(),a=r(e());function o(){let e=(0,i.c)(2),{_splat:t}=n.useParams(),r;return e[0]===t?r=e[1]:(r=(0,a.jsxs)(`div`,{children:[t,` not found`]}),e[0]=t,e[1]=r),r}export{o as component};

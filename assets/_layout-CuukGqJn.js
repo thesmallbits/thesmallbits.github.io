@@ -1,0 +1,1 @@
+import{_ as e,d as t,f as n,v as r}from"./index-E2M-M2hv.js";var i=t(),a=r(e());function o(){let e=(0,i.c)(1),t;return e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=(0,a.jsx)(n,{}),e[0]=t):t=e[0],t}export{o as component};
