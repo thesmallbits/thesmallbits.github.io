@@ -20,6 +20,7 @@ so formed is used extensively in medicinal chemistry like the synthesis of Indom
 
 ## Reaction Mechanism
 
+##### Step 1:
 The Fischer Indole synthesis starts with phenyl hydrazine and a ketone or aldehyde which form phenylhydrazone.
 
 <Image
@@ -28,7 +29,12 @@ The Fischer Indole synthesis starts with phenyl hydrazine and a ketone or aldehy
   widthRem="40"
 />
 
-The imine then undergoes tautomerization to form an enamine which is followed by a [3,3] sigmatropic rearrangement and aromatization
+##### Step 2:
+The imine then undergoes tautomerization to form an enamine. This step is followed by a [3,3] sigmatropic rearrangement (we will come back the 
+molecular orbital description of this step at a later blog), the Nitrogen atoms are given the numbering 1 (number 1 is given to the atoms where the sigma bond breaks) 
+and moving towards each side the third atom forms the new sigma bond (according to Woodward-Hoffman sigmatropic shift nomenclature).
+
+Like most aromatic system reactions the final step comprises of an aromatization process by the elimination of a Hydrogen atom as H+
 
 <Image
   src="/images/fischer_indole/step2.png"
@@ -36,7 +42,9 @@ The imine then undergoes tautomerization to form an enamine which is followed by
   widthRem="40"
 />
 
-The reaction ends with an acid-catalyzed removal of NH3 and an aromatic indole formation.
+##### Step 3:
+The reaction completed with a removal of the NH3 molecule followed by another aromatization step forming the final aromatic indole product.
+Both steps, (2) and step (3) are catalyzed by an acid medium and heating.
 
 <Image
   src="/images/fischer_indole/step3.png"
@@ -44,42 +52,87 @@ The reaction ends with an acid-catalyzed removal of NH3 and an aromatic indole f
   widthRem="40"
 />
 
-## Competitive Reactions: 
+## Susbstitution Pathways: 
 The indole synthesis proceeds via a critical [3,3] sigmatropic rearrangement and the regiochemistry are controlled by both electronic and steric effects.
-The following few examples showcase synthesis of only only major indole.
+The following few examples showcase synthesis of the various susbtitution pathways from the Fischer Indole.
 
-1. If carbonyl is enolizable only on one side
+##### a. If Carbonyl is Enolizable Only on One Side:
 
 <Image
   src="/images/fischer_indole/regio-1.png"
-  alt="Step 3"
+  alt="Regio 1"
   widthRem="40"
 />
 
-2. If only one of the ortho position is available
+There is one and only obvious product formed in the indole synthesis
 
-<Image
-  src="/images/fischer_indole/regio-2.png"
-  alt="Step 3"
-  widthRem="40"
-/>
-
-3. Using symmetric reagents
+##### b. Using Symmetric Reagents:
 
 <Image
   src="/images/fischer_indole/regio-3.png"
-  alt="Step 3"
+  alt="Regio 3"
   widthRem="40"
 />
 
-## Ondansetron Synthesis
+Either ortho position to hydrazine can be used however the product so formed will be same from both
 
+
+##### c. Based on Mono-Susbtitution Present on Phenyl Ring
+
+<Image
+  src="/images/fischer_indole/regio-2.png"
+  alt="Regio 2"
+  widthRem="50"
+/>
+
+While for para and ortho regioisomers of the phenyl hydrazine form only one product with the meta regioisomer one can expect two 
+products based on the substituent. If group is electron releasing product via para attack (orange site) is majorly formed whereas if group is electron withdrawing both
+para and ortho with respect to substituent (orange and red site) can give products.
+
+The pattern of meta substituted phenyl hydrazine can be understood by realizing the fact that the sigmatropic rearrangement requires a high electron density from the arene. For electron donating groups the electron densiry
+on benzne is increased at para position with respect to the substituent which is exactly where the bond formation is taking place. However, with electron withdrawing groups both the possible positions are equally disfavoured (electronically) hence, 
+product is seen to be a mix of both unless the substituent is bulky in which case the para product would dominate.
+
+##### d. For Unsymmetric Ketones
+Both sides can enolize it's seen that a strong acid enolizes the less substituted side (kinetic enolization) whereas, with a weak acid the enolization occurs at the more substituted side (thermodynamic enolization).
+
+## Application in Medicinal Chemistry
+The strong interactino and mimicing ability of the indole ring with body enzymes and receptors is heavily exploited in drug discovery. In the upcoming paragraph we discuss the synthesis of a migraine treatment drug, more drug applications are present in the exercise section.
+
+Sumatriptan (marketed as Imigran), is used for migraine treatment and closely resembles the structure of serotonin a neurotransmitter in the body.
+
+<Image
+  src="/images/fischer_indole/Sumatriptan.PNG"
+  alt="Regio 2"
+  widthRem="40"
+/>
+
+The first step starts by the phenyl hydrazine and a suitable carbonyl compound (it's better to use the acetal protected aldehyde to avoid self condensation).
+The hydrazone formation is followed by the indole formation and finally completed by the N-methylation using Eschweiler Clarke method.
 
 ---
 
 ## Exercise
 
+#### (a). Beginner
 
+<Image src="/images/fischer_indole/ex1.PNG" alt="ex1" widthRem={35} />
+
+#### (b). Intermediate
+
+<Image src="images/fischer_indole/ex2.PNG" alt="ex2" widthRem={40} />
+
+_Meksamine is used for the medical treatment of radiation overdose._
+
+#### (c). Advanced
+
+<Image src="images/fischer_indole/ex4.PNG" alt="ex4" widthRem={40} />
+
+_Anti nausea drug which works by blocking serotonin receptors in GI tractand the chemoreceptor trigger zone of the brain._
+
+<Image src="images/fischer_indole/ex5.PNG" alt="ex5" widthRem={40} />
+
+_From total synthesis of the Vinca alkaloid group, potential inhibitor of microtubule formation._
 
 ### References
 
