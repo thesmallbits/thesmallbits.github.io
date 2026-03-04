@@ -1,64 +1,8 @@
 import { cn, type ReactRef } from "@d1vij/shit-i-always-use";
-import { Link, type LinkProps } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef } from "react";
 import styles from "./header.module.css";
+import { MenuList, type MenuListProps } from "./MenuList";
 import { useMenuState } from "./MenuStateContext";
-
-type ExternalLink = {
-    title: string;
-    type: "external";
-    to: string;
-};
-type InternalLink = {
-    title: string;
-    type: "internal";
-    to: LinkProps["to"];
-    slug: LinkProps["params"];
-};
-export type MenuListProps = {
-    title: string;
-    links: (InternalLink | ExternalLink)[];
-};
-
-type MenuListItemProps = MenuListProps["links"][number];
-function MenuListItem(props: MenuListItemProps) {
-    const { setIsOpen } = useMenuState();
-    function handleClick() {
-        setIsOpen(false);
-    }
-
-    switch (props.type) {
-        case "external": {
-            return (
-                <li>
-                    <a href={props.to} onClick={handleClick}>
-                        {props.title}
-                    </a>
-                </li>
-            );
-        }
-        case "internal": {
-            return (
-                <li>
-                    <Link to={props.to} params={props.slug} onClick={handleClick}>
-                        {props.title}
-                    </Link>
-                </li>
-            );
-        }
-    }
-}
-
-function MenuList(props: MenuListProps) {
-    const linkElms = props.links.map((l) => <MenuListItem {...l} key={l.title} />);
-
-    return (
-        <div>
-            <h2>{props.title}</h2>
-            <ul>{linkElms}</ul>
-        </div>
-    );
-}
 
 type MenuProps = {
     lists: MenuListProps[];

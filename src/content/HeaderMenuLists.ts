@@ -1,4 +1,4 @@
-import type { MenuListProps } from "@/components/Header/HeaderMenu";
+import type { MenuListProps } from "@/components/Header/MenuList";
 
 const RepositoryList: MenuListProps = {
     title: "Content repository",
