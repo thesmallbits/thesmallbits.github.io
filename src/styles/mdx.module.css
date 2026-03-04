@@ -180,4 +180,68 @@
     .table_data {
         @apply p-1 border text-center;
     }
+
+    .table_action_button {
+        @apply cursor-pointer;
+        &:hover {
+            background-color: var(--color-light-secondary);
+        }
+        &:active {
+            @apply bg-green-200;
+        }
+    }
+    .table_action_button_csv {
+    }
+    .table_action_button_html {
+    }
+    .table_action_button_json {
+    }
+    .table_action_button_markdown {
+    }
+
+    .table_container {
+        position: relative;
+        @apply w-fit;
+    }
+    .table_action_buttons_summary {
+        @apply w-fit;
+        @apply border-2 p-1 px-2.5 cursor-pointer text-center;
+        border-color: var(--color-light-border);
+        background-color: var(--color-light-secondary);
+
+        @apply grid grid-cols-2;
+        &::marker {
+            content: none;
+        }
+    }
+
+    .table_action_buttons_details {
+        @apply flex-col items-end text-center;
+        @apply translate-x-full;
+        position: absolute;
+        background-color: var(--color-light-primary);
+        right: 0;
+        top: 100%;
+
+        button {
+            display: block;
+            @apply p-1;
+            @apply border-2 w-full;
+        }
+        &:open {
+            .table_action_buttons_summary {
+                @apply border-b-0;
+            }
+
+            button {
+                &:nth-of-type(n) {
+                    @apply border-b-transparent;
+                }
+                &,
+                &:last-of-type {
+                    border-color: var(--color-light-border);
+                }
+            }
+        }
+    }
 }

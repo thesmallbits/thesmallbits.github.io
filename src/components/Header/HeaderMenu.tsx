@@ -1,64 +1,8 @@
 import { cn, type ReactRef } from "@d1vij/shit-i-always-use";
-import { Link, type LinkProps } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef } from "react";
 import styles from "./header.module.css";
+import { MenuList, type MenuListProps } from "./MenuList";
 import { useMenuState } from "./MenuStateContext";
-
-type ExternalLink = {
-    title: string;
-    type: "external";
-    to: string;
-};
-type InternalLink = {
-    title: string;
-    type: "internal";
-    to: LinkProps["to"];
-    slug: LinkProps["params"];
-};
-export type MenuListProps = {
-    title: string;
-    links: (InternalLink | ExternalLink)[];
-};
-
-type MenuListItemProps = MenuListProps["links"][number];
-function MenuListItem(props: MenuListItemProps) {
-    const { setIsOpen } = useMenuState();
-    function handleClick() {
-        setIsOpen(false);
-    }
-
-    switch (props.type) {
-        case "external": {
-            return (
-                <li>
-                    <a href={props.to} onClick={handleClick}>
-                        {props.title}
-                    </a>
-                </li>
-            );
-        }
-        case "internal": {
-            return (
-                <li>
-                    <Link to={props.to} params={props.slug} onClick={handleClick}>
-                        {props.title}
-                    </Link>
-                </li>
-            );
-        }
-    }
-}
-
-function MenuList(props: MenuListProps) {
-    const linkElms = props.links.map((l) => <MenuListItem {...l} key={l.title} />);
-
-    return (
-        <div>
-            <h2>{props.title}</h2>
-            <ul>{linkElms}</ul>
-        </div>
-    );
-}
 
 type MenuProps = {
     lists: MenuListProps[];
@@ -75,6 +19,7 @@ export default function Menu({ lists, menuButtonRef }: MenuProps) {
     // 3. user clicks outside the menu
     // 4. user clicks on any of the menu links
     useEffect(() => {
+        // NOTE: this may cause issues if the dropped down menu goes outside of the viewport
         function handleScroll() {
             setIsOpen(false);
         }
@@ -95,7 +40,6 @@ export default function Menu({ lists, menuButtonRef }: MenuProps) {
             }
             // we clicked outside of the header
             else if (!self.contains(e.target as Node)) {
-                console.log("true");
                 setIsOpen(false);
             }
         }
@@ -117,11 +61,20 @@ export default function Menu({ lists, menuButtonRef }: MenuProps) {
                 "rounded-b-2xl bg-light-secondary shadow",
                 "absolute top-full mx-4",
                 "border-2 border-light-border border-t",
-                "grid min-h-[60dvh] w-[90%] p-4 md:w-[70%]",
+                "grid grid-cols-[1fr_auto]",
+                "w-[90%] p-4 md:w-[60%] lg:w-[50%]",
                 isOpen && styles.open,
             )}
         >
-            {elms}
+            <div className={cn("grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3")}>{elms}</div>
+
+            {/*ribbon*/}
+            <div className="relative h-[90%] w-10 shadow-xl">
+                <div className="absolute inset-0 -mt-5 size-full bg-light-shade-red">
+                    <div className="mx-auto mt-1 size-3 rounded-3xl bg-light-text-bg"></div>
+                </div>
+                <div className={cn(styles.ribbon, "absolute bottom-0 left-0 aspect-square w-full translate-y-2")}></div>
+            </div>
         </div>
     );
 }

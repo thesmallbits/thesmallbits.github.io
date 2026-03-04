@@ -1,10 +1,12 @@
 import { CoalescedRegistry, generateElementsFrom, Registry } from "@d1vij/jassm";
 import * as v from "valibot";
-import Image from "@/components/MDXImage";
+import Image from "@/components/MDX";
+import { Anchor } from "@/components/MDX/Anchor";
 
 export const Elements = generateElementsFrom(
     {
         Image,
+        a: Anchor,
     },
     true,
 );
@@ -41,19 +43,11 @@ const general = new Registry({
     mountOn: "/blogs/general",
     records: {
         "/style-guide": "/style_guide.mdx",
-    },
-});
-
-const blogs = new Registry({
-    modules,
-    source: "/src/assets/mdx/blogs",
-    mountOn: "/blogs",
-    records: {
         "/sample": "/sample1.mdx",
     },
 });
 
-export const registry = new CoalescedRegistry(blogs, chemistry, physics, maths, general);
+export const registry = new CoalescedRegistry(chemistry, physics, maths, general);
 
 export type RegistryType = typeof registry;
 /**

@@ -35,6 +35,15 @@ export const stylemap: StyleClassesMap = {
     table_body: styles.table_body,
     table_row: styles.table_row,
     table_data: styles.table_data,
+
+    table_container: styles.table_container,
+    table_action_button: styles.table_action_button,
+    table_action_button_csv: styles.table_action_button_csv,
+    table_action_button_html: styles.table_action_button_html,
+    table_action_button_json: styles.table_action_button_json,
+    table_action_button_markdown: styles.table_action_button_markdown,
+    table_action_buttons_summary: styles.table_action_buttons_summary,
+    table_action_buttons_details: styles.table_action_buttons_details,
 } as const;
 
 export default stylemap;

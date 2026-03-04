@@ -14,6 +14,7 @@
     --color-light-shade-gray: #cccccc;
     --font-monospace: "JetBrains Mono";
     --font-serifed: "Brawler";
+
     --default-font-family: var(--font-serifed);
 }
 
