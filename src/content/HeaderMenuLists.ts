@@ -1,7 +1,44 @@
 import type { MenuListProps } from "@/components/Header/MenuList";
 
+const BlogsList: MenuListProps = {
+    title: "Blogs",
+    links: [
+        {
+            title: "Physics",
+            type: "internal",
+            to: "/blogs/$subject",
+            slug: {
+                subject: "physics",
+            },
+        },
+        {
+            title: "Chemistry",
+            type: "internal",
+            to: "/blogs/$subject",
+            slug: {
+                subject: "chemistry",
+            },
+        },
+        {
+            title: "Mathematics",
+            type: "internal",
+            to: "/blogs/$subject",
+            slug: {
+                subject: "maths",
+            },
+        },
+        {
+            title: "General",
+            type: "internal",
+            to: "/blogs/$subject",
+            slug: {
+                subject: "general",
+            },
+        },
+    ],
+};
 const RepositoryList: MenuListProps = {
-    title: "Content repository",
+    title: "Content Repositories",
     links: [
         {
             title: "Chemistry",
@@ -55,4 +92,4 @@ const ContactList: MenuListProps = {
     ],
 } as const;
 
-export const HeaderMenuLists = [RepositoryList, ContactList];
+export const HeaderMenuLists = [BlogsList, RepositoryList, ContactList];

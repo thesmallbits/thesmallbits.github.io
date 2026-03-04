@@ -19,6 +19,7 @@ export default function Menu({ lists, menuButtonRef }: MenuProps) {
     // 3. user clicks outside the menu
     // 4. user clicks on any of the menu links
     useEffect(() => {
+        // NOTE: this may cause issues if the dropped down menu goes outside of the viewport
         function handleScroll() {
             setIsOpen(false);
         }
@@ -62,11 +63,11 @@ export default function Menu({ lists, menuButtonRef }: MenuProps) {
                 "absolute top-full mx-4",
                 "border-2 border-light-border border-t",
                 "grid grid-cols-[1fr_auto]",
-                "min-h-[60dvh] w-[90%] p-4 md:w-[70%]",
+                "w-[90%] p-4 md:w-[60%] lg:w-[50%]",
                 isOpen && styles.open,
             )}
         >
-            <div>{elms}</div>
+            <div className={cn("grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3")}>{elms}</div>
 
             {/*ribbon*/}
             <div className="relative h-[90%] w-10 shadow-xl">

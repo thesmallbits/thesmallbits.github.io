@@ -36,3 +36,28 @@
     mask-size: contain;
     mask-position: bottom;
 }
+
+.menulist {
+    .listTitle {
+        anchor-name: --list-title;
+    }
+    .listItem {
+        @apply relative;
+        &:last-child {
+            anchor-name: --last-elm;
+            .thelittledash {
+                @apply rounded-bl-4xl ;
+            }
+        }
+
+    }
+    .indexline {
+        position: absolute;
+        position-anchor: --list-title --last-elm;
+        top: anchor(--list-title bottom);
+        bottom: anchor(--last-elm center);
+    }
+
+
+
+}
