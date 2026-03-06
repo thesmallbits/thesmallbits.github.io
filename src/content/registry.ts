@@ -1,4 +1,4 @@
-import { CoalescedRegistry, generateElementsFrom, Registry } from "@d1vij/jassm";
+import { generateElementsFrom, Registry } from "@d1vij/jassm";
 import * as v from "valibot";
 import Image from "@/components/MDX";
 import { Anchor } from "@/components/MDX/Anchor";
@@ -11,52 +11,21 @@ export const Elements = generateElementsFrom(
     true,
 );
 
-const modules = import.meta.glob("/src/assets/mdx/**/*.mdx");
-
-export const physics = new Registry({
-    modules,
-    source: "/src/assets/mdx/blogs/physics",
-    mountOn: "/blogs/physics",
-    records: {},
+export const registry = new Registry({
+    modulesGlob: import.meta.glob("/src/assets/mdx/blogs/**/*.mdx"),
+    metadataGlob: import.meta.glob("/src/assets/mdx/blogs/**/*.meta.ts", {
+        eager: true,
+        import: "meta",
+    }),
+    root: "/src/assets/mdx/blogs",
+    virtual: "",
 });
 
-export const maths = new Registry({
-    modules,
-    source: "/src/assets/mdx/blogs/maths",
-    mountOn: "/blogs/maths",
-    records: {},
-});
-
-export const chemistry = new Registry({
-    modules,
-    source: "/src/assets/mdx/blogs/chemistry",
-    mountOn: "/blogs/chemistry",
-    records: {
-        "/beckmann-rearrangement": "/BeckmannRearrangement.mdx",
-        "/fischer-indole-synthesis": "/FischerIndoleSynthesis.mdx",
-    },
-});
-
-const general = new Registry({
-    modules,
-    source: "/src/assets/mdx/blogs/general",
-    mountOn: "/blogs/general",
-    records: {
-        "/style-guide": "/style_guide.mdx",
-        "/sample": "/sample1.mdx",
-    },
-});
-
-export const registry = new CoalescedRegistry(chemistry, physics, maths, general);
-
+console.log(registry);
 export type RegistryType = typeof registry;
-/**
- * Entries of the registry
- */
-export const entries = Object.keys(registry.components) as [keyof RegistryType["components"]];
 /**
  * Schema for validating entries of registry
  */
-export const RegistryKeySchema = v.picklist(entries);
+export const RegistryKeySchema = v.picklist(registry.keys);
 
 export default registry;
