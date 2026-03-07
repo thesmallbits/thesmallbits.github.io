@@ -33,6 +33,10 @@ export type RegistryType = typeof registry;
 /**
  * Schema for validating entries of registry
  */
-export const RegistryKeySchema = v.picklist(registry.keys);
+// FIXME: Add proper registry key validation.
+// Would be only possible when it gets fixed in jassm
+// it works but tab tak ke liye we lose typings in content 🤷‍♂
+// export const RegistryKeySchema = v.picklist(registry.keys);
+export const RegistryKeySchema = v.string();
 
 export default registry;

@@ -1,13 +1,16 @@
+// TODO: pls style me
 import { Activity, cn } from "@d1vij/shit-i-always-use";
 import { useLoaderData } from "@tanstack/react-router";
-import { type HotLink, UNDEFINED } from "@/schemas/SubjectBlogPageSchema";
+import { UNDEFINED } from "@/schemas/SubjectBlogPageSchema";
+import { HighlightedBlog } from "./HighlightedBlog";
 import styles from "./subjectHome.module.css";
+
 export default function Subject() {
     const content = useLoaderData({
-        from: "/blogs/$subject/",
+        from: "/$subject",
     });
 
-    const highlightedBlogElms = content.hot_links.map((l) => <HighlightedBlog {...l} key={l.url} />);
+    const highlightedBlogElms = content.hot_links.map((l) => <HighlightedBlog {...l} key={l.splat} />);
     return (
         <div>
             <h1 className={cn(styles.subjectTitle, "text-9xl")}>{content.title}</h1>
@@ -26,21 +29,6 @@ export default function Subject() {
                 <h2>Highlighted Blogs</h2>
                 <div>{highlightedBlogElms}</div>
             </section>
-        </div>
-    );
-}
-
-type HighlightedBlogProps = HotLink;
-export function HighlightedBlog(props: HighlightedBlogProps) {
-    return (
-        <div className={cn("border border-light-border bg-light-secondary")}>
-            <h3>{props.title}</h3>
-            <p>{props.summary}</p>
-            {/*<Activity show={props.reading_minutes !== UNDEFINED.READING_TIME}>*/}
-            {/*FIXME: SHITIALWAYSUEISBROKENPLSSEE*/}
-            <Activity show={true}>
-                <p>hi</p>
-            </Activity>
         </div>
     );
 }

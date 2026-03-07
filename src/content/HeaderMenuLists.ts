@@ -6,7 +6,7 @@ const BlogsList: MenuListProps = {
         {
             title: "Physics",
             type: "internal",
-            to: "/blogs/$subject",
+            to: "/$subject",
             slug: {
                 subject: "physics",
             },
@@ -14,7 +14,7 @@ const BlogsList: MenuListProps = {
         {
             title: "Chemistry",
             type: "internal",
-            to: "/blogs/$subject",
+            to: "/$subject",
             slug: {
                 subject: "chemistry",
             },
@@ -22,7 +22,7 @@ const BlogsList: MenuListProps = {
         {
             title: "Mathematics",
             type: "internal",
-            to: "/blogs/$subject",
+            to: "/$subject",
             slug: {
                 subject: "maths",
             },
@@ -30,7 +30,7 @@ const BlogsList: MenuListProps = {
         {
             title: "General",
             type: "internal",
-            to: "/blogs/$subject",
+            to: "/$subject",
             slug: {
                 subject: "general",
             },

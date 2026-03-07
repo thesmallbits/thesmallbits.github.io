@@ -4,7 +4,7 @@ import * as v from "valibot";
 import { MetaSchema } from "@/schemas";
 
 const { registry } = await import("@/content/registry");
-const BlogSlug = lazy(() => import("@/components/Blog/BlogSlug"));
+const BlogSlug = lazy(() => import("@/components/BlogSlug"));
 export const Route = createFileRoute("/blogs/$")({
     component: BlogSlug,
     loader({ params: { _splat } }) {

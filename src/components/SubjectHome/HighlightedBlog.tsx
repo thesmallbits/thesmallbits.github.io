@@ -2,12 +2,9 @@ import { Activity, cn } from "@d1vij/shit-i-always-use";
 import { Link } from "@tanstack/react-router";
 import { Hourglass } from "lucide-react";
 import { type HotLink, UNDEFINED } from "@/schemas/SubjectBlogPageSchema";
-import { useSubjectAndBlogSlug } from "../hooks";
 
 type HighlightedBlogProps = HotLink;
 export function HighlightedBlog(props: HighlightedBlogProps) {
-    const slugs = useSubjectAndBlogSlug(props.url);
-
     return (
         <div
             className={cn(
@@ -32,8 +29,10 @@ export function HighlightedBlog(props: HighlightedBlogProps) {
                     </div>
                 </Activity>
                 <Link
-                    to={"/blogs/$subject/$blog"}
-                    params={slugs}
+                    to={"/blogs/$"}
+                    params={{
+                        _splat: props.splat,
+                    }}
                     className={cn("cool-something-button-like", "ml-auto")}
                 >
                     Read
