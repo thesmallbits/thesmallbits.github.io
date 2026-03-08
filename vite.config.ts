@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-
 import { tanstackRouter } from "@tanstack/router-vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
@@ -26,7 +25,8 @@ export default defineConfig(({mode}) => ({
         devSourcemap: true,
     },
     build: {
-        sourcemap: true,
+        //sourcemap: true,
+          
         minify: "esbuild",
         license: true,
         // rolldownOptions: {
