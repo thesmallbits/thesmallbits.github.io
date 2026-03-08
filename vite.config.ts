@@ -16,17 +16,21 @@ export default defineConfig(({mode}) => ({
         allowedHosts: true
     },
     define: {
-        "NODE_ENV": "'production'"
+        "process.env.NODE_ENV":"'production'"
+    },
+    css: {
+        devSourcemap: true,
     },
     build: {
-        minify: "oxc",
+        sourcemap: true,
+        minify: "esbuild",
         license: true,
-        rolldownOptions: {
-            treeshake: true,
-            logLevel:"info",
-            optimization: {
-                inlineConst:{mode:"all", "pass":1}
-            }}
+        // rolldownOptions: {
+        //     treeshake: true,
+        //     logLevel:"info",
+        //     optimization: {
+        //         inlineConst:{mode:"all", "pass":1}
+        //     }}
     },
     resolve: {
         alias: {
