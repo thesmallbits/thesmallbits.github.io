@@ -4,7 +4,6 @@
     --blockquote-color: rgba(from var(--color-light-shade-green) r g b / 20%);
 }
 
-@layer components {
     .header {
         @apply w-full font-semibold cursor-pointer;
         @apply mb-4 mt-4;
@@ -244,4 +243,3 @@
             }
         }
     }
-}
