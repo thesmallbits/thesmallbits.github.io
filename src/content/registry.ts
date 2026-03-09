@@ -29,9 +29,10 @@ if (diffResults) {
 }
 
 export type RegistryType = typeof registry;
+console.log(registry.keys);
 /**
  * Schema for validating entries of registry
  */
-export const RegistryKeySchema = v.picklist(registry.keys);
+export const RegistryKeySchema = v.pipe(v.picklist(registry.keys));
 
 export default registry;

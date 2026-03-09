@@ -16,8 +16,6 @@ export function Anchor(props: ElementProps<"a">) {
         return targetOrigin === selfOrigin ? "_self" : "_blank";
     });
 
-    console.log(props.href);
-
     if (target === "_self") {
         return (
             <Link hash={props.href?.slice(1)} to="." className={cn(stylemap.anchor)} target="_self">

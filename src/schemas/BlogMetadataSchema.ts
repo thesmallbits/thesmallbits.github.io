@@ -9,3 +9,6 @@ export const MetadataSchema = v.object({
     tags: v.array(v.string()),
     summary: v.optional(v.string(), ""),
 });
+
+export type Metadata = v.InferInput<typeof MetadataSchema>;
+export type MetadataKey = keyof Metadata;
