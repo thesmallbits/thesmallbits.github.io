@@ -2,7 +2,7 @@
 
 The app bundles dependencies which contain the following licenses:
 
-## @d1vij/jassm - 0.1.20 (MIT)
+## @d1vij/jassm - 0.1.21 (MIT)
 
 MIT License
 
@@ -74,7 +74,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## @tanstack/react-router - 1.166.4 (MIT)
+## @tanstack/react-router - 1.166.6 (MIT)
 
 MIT License
 
@@ -122,7 +122,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## @tanstack/router-core - 1.166.4 (MIT)
+## @tanstack/router-core - 1.166.6 (MIT)
 
 MIT License
 
