@@ -1,1 +1,0 @@
-import{w as a}from"./registry-CJyB2ezJ.js";function c(r){return a({from:r.from,strict:r.strict,structuralSharing:r.structuralSharing,select:t=>r.select?r.select(t.loaderData):t.loaderData})}export{c as t};
