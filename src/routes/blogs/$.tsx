@@ -12,6 +12,10 @@ const BlogSlug = lazy(() => import("@/components/BlogSlug"));
  */
 export const UNDEFINED_PATH = "87650307-114d-4600-b067-daac48fea4f0"; // no sane person will have a file named like this
 
+const SearchSchema = v.object({
+    focus: v.optional(v.string()),
+});
+
 export const Route = createFileRoute("/blogs/$")({
     component: BlogSlug,
     params: {
@@ -33,5 +37,8 @@ export const Route = createFileRoute("/blogs/$")({
             exports: registry.getExport(_splat),
             metadata: results.output,
         };
+    },
+    validateSearch(s) {
+        return v.parse(SearchSchema, s);
     },
 });

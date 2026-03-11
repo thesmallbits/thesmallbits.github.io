@@ -44,11 +44,9 @@ export function groupMetadataAlphabetically<Based extends RegistryMetadataKeys, 
 ) {
     const groups: Record<string, RegistryMetadata[]> = {};
 
-    console.log("grouping");
     for (const metadata of metadatas) {
         const value = metadata[based];
         let letter = value.charAt(0);
-        console.log(letter);
 
         if (!caseSensitive) letter = letter.toLowerCase();
         const arr = groups[letter] ?? [];

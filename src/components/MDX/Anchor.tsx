@@ -1,9 +1,9 @@
+import type { ElementProps } from "@d1vij/jassm";
 import { cn } from "@d1vij/shit-i-always-use";
-import { Link } from "@tanstack/react-router";
+import { useNavigate } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { stylemap } from "@/styles/mdx.stylesmap";
 
-export type ElementProps<T extends React.ElementType> = React.ComponentPropsWithoutRef<T>;
 export function Anchor(props: ElementProps<"a">) {
     const selfOrigin = useMemo(() => new URL(window.location.href).origin.toString(), []);
     const [target] = useState<"_self" | "_blank">(() => {
@@ -16,11 +16,22 @@ export function Anchor(props: ElementProps<"a">) {
         return targetOrigin === selfOrigin ? "_self" : "_blank";
     });
 
+    const navigate = useNavigate();
+
+    function handleSelfClick() {
+        navigate({
+            to: ".",
+            search: {
+                focus: props.href?.slice(1),
+            },
+        });
+    }
+
     if (target === "_self") {
         return (
-            <Link hash={props.href?.slice(1)} to="." className={cn(stylemap.anchor)} target="_self">
+            <button className={cn(stylemap.anchor, "cursor-pointer")} type="button" onClick={handleSelfClick}>
                 {props.children}
-            </Link>
+            </button>
         );
     } else
         return (

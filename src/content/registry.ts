@@ -1,12 +1,17 @@
-import { generateElementsFrom, Registry } from "@d1vij/jassm";
+import { type ElementProps, generateElementsFrom, Registry } from "@d1vij/jassm";
 import * as v from "valibot";
-import Image from "@/components/MDX";
-import { Anchor } from "@/components/MDX/Anchor";
+import { Anchor, Header, Image } from "@/components/MDX";
 
 export const Elements = generateElementsFrom(
     {
         Image,
         a: Anchor,
+        h1: (props: ElementProps<"h1">) => Header({ ...props, level: 1 }),
+        h2: (props: ElementProps<"h1">) => Header({ ...props, level: 2 }),
+        h3: (props: ElementProps<"h1">) => Header({ ...props, level: 3 }),
+        h4: (props: ElementProps<"h1">) => Header({ ...props, level: 4 }),
+        h5: (props: ElementProps<"h1">) => Header({ ...props, level: 5 }),
+        h6: (props: ElementProps<"h1">) => Header({ ...props, level: 6 }),
     },
     true,
 );
