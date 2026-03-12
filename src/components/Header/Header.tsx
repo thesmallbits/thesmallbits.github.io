@@ -64,34 +64,34 @@ export default function Header() {
     const isRoot = pathname === "/";
 
     return (
-        <header
-            className={cn(
-                "relative",
-                "primary-border cool-background-shit shadow shadow-light-secondary",
-                "relative z-30 h-fit w-full border-0 border-t-0 border-b",
-                "grid",
-                isRoot ? "grid-cols-2" : "grid-cols-[auto_1fr_auto]",
-            )}
-        >
-            <MenuStateContext value={{ isOpen, setIsOpen }}>
-                <Menu lists={HeaderMenuLists} menuButtonRef={menuButtonRef} />
-                <span className="m-2 ml-4 flex gap-2">
-                    <HeaderButton title="Menu" ref={menuButtonRef} action={toggleMenu} />
-                </span>
-            </MenuStateContext>
-            <h1
+        <MenuStateContext value={{ isOpen, setIsOpen }}>
+            <header
                 className={cn(
-                    "mx-auto h-full w-fit place-self-center border-light-border border-x-2 bg-light-secondary px-3 font-semibold text-lg tracking-tighter md:text-4xl lg:text-5xl",
-                    "grid place-items-center text-center",
-                    isRoot && "hidden",
-                    // "border-transparent bg-transparent text-transparent size-0",
+                    "primary-border cool-background-shit shadow shadow-light-secondary",
+                    // NOTE: Change header height here if changing the base font size or else shit would overflow
+                    "z-90 h-12 w-full border-0 border-t-0 border-b md:h-14",
+                    "grid",
+                    isRoot ? "grid-cols-2" : "grid-cols-[auto_1fr_auto]",
                 )}
             >
-                The Small Bits
-            </h1>
-            <span className="m-2 mr-5 w-fit place-self-end">
-                <HeaderLink to="/about" title="About Us" />
-            </span>
-        </header>
+                <span className="z-20 m-2 ml-4 flex gap-2">
+                    <HeaderButton title="Menu" ref={menuButtonRef} action={toggleMenu} />
+                </span>
+                <h1
+                    className={cn(
+                        "mx-auto h-full w-fit place-self-center border-light-border border-x-2 bg-light-secondary px-3 font-semibold text-lg tracking-tighter md:text-4xl lg:text-5xl",
+                        "grid place-items-center text-center",
+                        isRoot && "hidden",
+                        // "border-transparent bg-transparent text-transparent size-0",
+                    )}
+                >
+                    The Small Bits
+                </h1>
+                <span className="m-2 mr-5 w-fit place-self-end">
+                    <HeaderLink to="/about" title="About Us" />
+                </span>
+            </header>
+            <Menu lists={HeaderMenuLists} menuButtonRef={menuButtonRef} />
+        </MenuStateContext>
     );
 }

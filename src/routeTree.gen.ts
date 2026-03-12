@@ -14,7 +14,9 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as SubjectRouteImport } from './routes/$subject'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as RepositoryIndexRouteImport } from './routes/repository/index'
+import { Route as PeopleIndexRouteImport } from './routes/people/index'
 import { Route as RepositoryRepositoryRouteImport } from './routes/repository/$repository'
+import { Route as PeoplePersonRouteImport } from './routes/people/$person'
 import { Route as BlogsSplatRouteImport } from './routes/blogs/$'
 
 const JoinUsRoute = JoinUsRouteImport.update({
@@ -42,9 +44,19 @@ const RepositoryIndexRoute = RepositoryIndexRouteImport.update({
   path: '/repository/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PeopleIndexRoute = PeopleIndexRouteImport.update({
+  id: '/people/',
+  path: '/people/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RepositoryRepositoryRoute = RepositoryRepositoryRouteImport.update({
   id: '/repository/$repository',
   path: '/repository/$repository',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PeoplePersonRoute = PeoplePersonRouteImport.update({
+  id: '/people/$person',
+  path: '/people/$person',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogsSplatRoute = BlogsSplatRouteImport.update({
@@ -59,7 +71,9 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/join-us': typeof JoinUsRoute
   '/blogs/$': typeof BlogsSplatRoute
+  '/people/$person': typeof PeoplePersonRoute
   '/repository/$repository': typeof RepositoryRepositoryRoute
+  '/people/': typeof PeopleIndexRoute
   '/repository/': typeof RepositoryIndexRoute
 }
 export interface FileRoutesByTo {
@@ -68,7 +82,9 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/join-us': typeof JoinUsRoute
   '/blogs/$': typeof BlogsSplatRoute
+  '/people/$person': typeof PeoplePersonRoute
   '/repository/$repository': typeof RepositoryRepositoryRoute
+  '/people': typeof PeopleIndexRoute
   '/repository': typeof RepositoryIndexRoute
 }
 export interface FileRoutesById {
@@ -78,7 +94,9 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/join-us': typeof JoinUsRoute
   '/blogs/$': typeof BlogsSplatRoute
+  '/people/$person': typeof PeoplePersonRoute
   '/repository/$repository': typeof RepositoryRepositoryRoute
+  '/people/': typeof PeopleIndexRoute
   '/repository/': typeof RepositoryIndexRoute
 }
 export interface FileRouteTypes {
@@ -89,7 +107,9 @@ export interface FileRouteTypes {
     | '/about'
     | '/join-us'
     | '/blogs/$'
+    | '/people/$person'
     | '/repository/$repository'
+    | '/people/'
     | '/repository/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -98,7 +118,9 @@ export interface FileRouteTypes {
     | '/about'
     | '/join-us'
     | '/blogs/$'
+    | '/people/$person'
     | '/repository/$repository'
+    | '/people'
     | '/repository'
   id:
     | '__root__'
@@ -107,7 +129,9 @@ export interface FileRouteTypes {
     | '/about'
     | '/join-us'
     | '/blogs/$'
+    | '/people/$person'
     | '/repository/$repository'
+    | '/people/'
     | '/repository/'
   fileRoutesById: FileRoutesById
 }
@@ -117,7 +141,9 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   JoinUsRoute: typeof JoinUsRoute
   BlogsSplatRoute: typeof BlogsSplatRoute
+  PeoplePersonRoute: typeof PeoplePersonRoute
   RepositoryRepositoryRoute: typeof RepositoryRepositoryRoute
+  PeopleIndexRoute: typeof PeopleIndexRoute
   RepositoryIndexRoute: typeof RepositoryIndexRoute
 }
 
@@ -158,11 +184,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RepositoryIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/people/': {
+      id: '/people/'
+      path: '/people'
+      fullPath: '/people/'
+      preLoaderRoute: typeof PeopleIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/repository/$repository': {
       id: '/repository/$repository'
       path: '/repository/$repository'
       fullPath: '/repository/$repository'
       preLoaderRoute: typeof RepositoryRepositoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/people/$person': {
+      id: '/people/$person'
+      path: '/people/$person'
+      fullPath: '/people/$person'
+      preLoaderRoute: typeof PeoplePersonRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blogs/$': {
@@ -181,7 +221,9 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   JoinUsRoute: JoinUsRoute,
   BlogsSplatRoute: BlogsSplatRoute,
+  PeoplePersonRoute: PeoplePersonRoute,
   RepositoryRepositoryRoute: RepositoryRepositoryRoute,
+  PeopleIndexRoute: PeopleIndexRoute,
   RepositoryIndexRoute: RepositoryIndexRoute,
 }
 export const routeTree = rootRouteImport

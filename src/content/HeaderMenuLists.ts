@@ -69,27 +69,51 @@ const ContactList: MenuListProps = {
             type: "external",
             to: "https://github.com/thesmallbits",
         },
-        {
-            title: "Youtube",
-            type: "external",
-            to: "https://github.com/thesmallbits",
-        },
-        {
-            title: "Instagram",
-            type: "external",
-            to: "https://github.com/thesmallbits",
-        },
-        {
-            title: "Some cool site",
-            type: "external",
-            to: "https://github.com/thesmallbits",
-        },
-        {
-            title: "Some Other cool site",
-            type: "external",
-            to: "https://github.com/thesmallbits",
-        },
+        // {
+        //     title: "Youtube",
+        //     type: "external",
+        //     to: "https://github.com/thesmallbits",
+        // },
+        // {
+        //     title: "Instagram",
+        //     type: "external",
+        //     to: "https://github.com/thesmallbits",
+        // },
+        // {
+        //     title: "Some cool site",
+        //     type: "external",
+        //     to: "https://github.com/thesmallbits",
+        // },
+        // {
+        //     title: "Some Other cool site",
+        //     type: "external",
+        //     to: "https://github.com/thesmallbits",
+        // },
     ],
 } as const;
 
-export const HeaderMenuLists = [BlogsList, RepositoryList, ContactList];
+const Miscellaneous: MenuListProps = {
+    title: "Miscellaneous",
+    links: [
+        {
+            title: "People",
+            type: "internal",
+            to: "/people",
+            slug: {},
+        },
+        {
+            title: "Join Us",
+            type: "internal",
+            to: "/join-us",
+            slug: {},
+        },
+        {
+            title: "About Us",
+            type: "internal",
+            to: "/about",
+            slug: {},
+        },
+    ],
+};
+
+export const HeaderMenuLists = [BlogsList, RepositoryList, Miscellaneous, ContactList];

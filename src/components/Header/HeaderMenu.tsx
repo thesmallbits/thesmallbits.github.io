@@ -58,12 +58,13 @@ export default function Menu({ lists, menuButtonRef }: MenuProps) {
             ref={ref}
             className={cn(
                 styles.headerMenu,
-                "rounded-b-2xl bg-light-secondary shadow",
-                "absolute top-full mx-4",
+                "rounded-b-2xl bg-light-secondary",
+                "fixed top-12 z-80 mx-4 md:top-14",
                 "border-2 border-light-border border-t",
                 "grid grid-cols-[1fr_auto]",
                 "w-[90%] p-4 md:w-[60%] lg:w-[50%]",
                 isOpen && styles.open,
+                isOpen && "shadow",
             )}
         >
             <div className={cn("grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3")}>{elms}</div>
