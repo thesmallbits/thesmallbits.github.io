@@ -4,7 +4,7 @@ import * as v from "valibot";
 
 const SubjectHome = lazy(() => import("@/components/SubjectHome"));
 
-import registry from "@/content/registry";
+import blogRegistry from "@/content/BlogRegistry";
 import { subjectPageIndex } from "@/content/subjectHomePages";
 import { getFromLocalStorage, groupMetadataAlphabetically } from "@/lib";
 import { filterArrayByRegex } from "@/lib/filterArray";
@@ -22,14 +22,14 @@ export const Route = createFileRoute("/$subject")({
 
         const subjectSplats: string[] = JSON.parse(
             getFromLocalStorage(content.title, () => {
-                const splats = registry.keys;
+                const splats = blogRegistry.keys;
                 // all the splats which correspond to this particular subject
                 const subjectSplats = filterArrayByRegex(splats, content.regex);
                 return JSON.stringify(subjectSplats);
             }),
         );
 
-        const subjectMetadatas = (Object.values(registry.metadata) as RegistryMetadata[]).filter((m) =>
+        const subjectMetadatas = (Object.values(blogRegistry.metadata) as RegistryMetadata[]).filter((m) =>
             subjectSplats.includes(m.__splat),
         );
         const groups: ReturnType<typeof groupMetadataAlphabetically> = JSON.parse(

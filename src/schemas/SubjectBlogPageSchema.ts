@@ -1,5 +1,5 @@
 import * as v from "valibot";
-import { RegistryKeySchema } from "@/content/registry";
+import { BlogRegistryKeySchema } from "@/content/BlogRegistry";
 import { UNDEFINED_QUOTE, UNDEFINED_QUOTE_AUTHOR } from "./BlogMetadataSchema";
 
 export const ValidSubjects = ["chemistry", "physics", "maths", "general"] as const;
@@ -13,7 +13,7 @@ export const SubjectBlogPageSchema = v.object({
     ),
     quote: v.pipe(v.optional(v.string(), UNDEFINED_QUOTE), v.description("the quote to show below the subject title")),
     quote_author: v.pipe(v.optional(v.string(), UNDEFINED_QUOTE_AUTHOR), v.description("quote author")),
-    highlights: v.pipe(v.array(RegistryKeySchema), v.description("blogs to preview on the subject's home page")),
+    highlights: v.pipe(v.array(BlogRegistryKeySchema), v.description("blogs to preview on the subject's home page")),
 });
 
 // what in the convoluted shit is this

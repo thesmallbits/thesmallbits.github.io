@@ -1,7 +1,7 @@
 import { MDXFromComponent } from "@d1vij/jassm";
 import { cn } from "@d1vij/shit-i-always-use";
 import { useLoaderData } from "@tanstack/react-router";
-import { Elements } from "@/content/registry";
+import { Elements } from "@/content/MdxElements";
 import { UNDEFINED_READING_TIME } from "@/schemas";
 import { stylemap } from "@/styles/mdx.stylesmap";
 import styles from "./blogslug.module.css";

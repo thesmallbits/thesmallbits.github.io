@@ -3,21 +3,22 @@ import { Link } from "@tanstack/react-router";
 import { Hourglass } from "lucide-react";
 import { useMemo } from "react";
 import * as v from "valibot";
-import { type RegistryKey, registry } from "@/content/registry";
+import { type BlogRegistryKey, blogRegistry } from "@/content/BlogRegistry";
 import { RegistryMetadataSchema, UNDEFINED_READING_TIME } from "@/schemas";
 
 type HighlightedBlogProps = {
-    splat: RegistryKey;
+    splat: BlogRegistryKey;
 };
 export function HighlightedBlog(props: HighlightedBlogProps) {
     const meta = useMemo(() => {
-        return v.parse(RegistryMetadataSchema, registry.getMetadata(props.splat));
+        return v.parse(RegistryMetadataSchema, blogRegistry.getMetadata(props.splat));
     }, [props.splat]);
     return (
         <div
             className={cn(
                 "border border-light-border bg-light-secondary",
                 "p-2",
+                "shadow-lg",
                 "row-span-3 grid grid-rows-subgrid",
                 // "transition-shadow-xs duration-400 ease-out hover:shadow-2xs",
             )}

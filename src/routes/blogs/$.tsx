@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import * as v from "valibot";
-import { RegistryKeySchema } from "@/content/registry";
+import { BlogRegistryKeySchema } from "@/content/BlogRegistry";
 import { RegistryMetadataSchema } from "@/schemas";
 
-const { registry } = await import("@/content/registry");
+const { blogRegistry: registry } = await import("@/content/BlogRegistry");
 
 // lazy loading caused the entire page to appear empty while the component was loading
 // so we instead wrap the MDX loading in Suspense for lazy loadeding blog itself
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/blogs/$")({
     params: {
         parse: ({ _splat }) => {
             return {
-                _splat: v.parse(RegistryKeySchema, _splat),
+                _splat: v.parse(BlogRegistryKeySchema, _splat),
             };
         },
     },

@@ -1,5 +1,5 @@
 import * as v from "valibot";
-import { RegistryKeySchema } from "@/content/registry";
+import { BlogRegistryKeySchema } from "@/content/BlogRegistry";
 import type { KeysWithValueAsType } from "@/types";
 
 export const UNDEFINED_READING_TIME = -1;
@@ -27,7 +27,7 @@ export type UserDefinedMetadataKey = keyof UserDefinedMetadata;
  */
 export const RegistryMetadataSchema = v.object({
     ...UserDefinedMetadataSchema.entries,
-    __splat: RegistryKeySchema,
+    __splat: BlogRegistryKeySchema,
 });
 
 export type RegistryMetadata = v.InferInput<typeof RegistryMetadataSchema>;

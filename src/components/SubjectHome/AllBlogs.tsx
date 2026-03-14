@@ -70,7 +70,7 @@ function LetterSection({ letter, blogs }: LetterSectionProps) {
     );
 }
 
-import registry from "@/content/registry";
+import blogRegistry from "@/content/BlogRegistry";
 import type { UserDefinedMetadata } from "@/schemas";
 
 function BlogLink({ splat }: { splat: string }) {
@@ -84,7 +84,7 @@ function BlogLink({ splat }: { splat: string }) {
             resetScroll: true,
         });
     }, [vibrator, splat, navigate]);
-    const meta = registry.getMetadata<UserDefinedMetadata>(splat);
+    const meta = blogRegistry.getMetadata<UserDefinedMetadata>(splat);
 
     return (
         <li className={cn(styles.list, "grid grid-cols-[auto_1fr]")}>
