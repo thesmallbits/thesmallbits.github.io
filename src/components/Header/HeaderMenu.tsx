@@ -1,6 +1,6 @@
 import { cn, type ReactRef } from "@d1vij/shit-i-always-use";
 import { useEffect, useMemo, useRef } from "react";
-import Ribbon from "@/components/Ribbon";
+import Ribbon from "@/components/Decorations/Ribbon";
 import styles from "./header.module.css";
 import { MenuList, type MenuListProps } from "./MenuList";
 import { useMenuState } from "./MenuStateContext";

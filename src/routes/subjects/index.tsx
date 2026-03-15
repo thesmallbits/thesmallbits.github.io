@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/subjects/")({
-    component: RouteComponent,
-});
+import SubjectIndex from "@/components/SubjectIndex";
 
-function RouteComponent() {
-    return <div>Hello "/subject/"!</div>;
-}
+export const Route = createFileRoute("/subjects/")({
+    component: SubjectIndex,
+    head() {
+        return {
+            meta: [{ title: "Subjects @ thesmallbits" }],
+        };
+    },
+});

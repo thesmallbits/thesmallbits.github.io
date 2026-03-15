@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Hourglass } from "lucide-react";
 import { useMemo } from "react";
 import * as v from "valibot";
-import Ribbon from "@/components/Ribbon";
+import Ribbon from "@/components/Decorations/Ribbon";
 import { type BlogRegistryKey, blogRegistry } from "@/content/BlogRegistry";
 import { RegistryMetadataSchema, UNDEFINED_READING_TIME } from "@/schemas";
 

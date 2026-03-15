@@ -1,7 +1,7 @@
 // script to valdiate static schemas at build time
 // "prebuild": "bun run src/scripts/prebuild.ts",
 
-import { subjectPageIndex } from "../src/content/subjectHomePages";
+import { subjectPageIndex } from "../src/content/Subjects";
 
 const tests: TestSchemas = [
     {

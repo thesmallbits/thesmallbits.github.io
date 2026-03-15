@@ -1,6 +1,6 @@
 import { Activity, cn } from "@d1vij/shit-i-always-use";
 import { Link, useLoaderData } from "@tanstack/react-router";
-import Ribbon from "@/components/Ribbon";
+import Ribbon from "@/components/Decorations/Ribbon";
 import { UNDEFINED_QUOTE, UNDEFINED_QUOTE_AUTHOR } from "@/schemas";
 import AllBlogs from "./AllBlogs";
 import { HighlightedBlog } from "./HighlightedBlog";

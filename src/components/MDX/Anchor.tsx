@@ -35,7 +35,7 @@ export function Anchor(props: ElementProps<"a">) {
         );
     } else
         return (
-            <a className={stylemap.anchor} href={props.href} target="_blank">
+            <a className={stylemap.anchor} href={props.href} target="_blank" rel="noopener">
                 {props.children}
             </a>
         );

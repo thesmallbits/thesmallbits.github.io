@@ -3,6 +3,8 @@ import { BlogRegistryKeySchema } from "@/content/BlogRegistry";
 import { UNDEFINED_QUOTE, UNDEFINED_QUOTE_AUTHOR } from "./BlogMetadataSchema";
 
 export const ValidSubjects = ["chemistry", "physics", "maths", "general"] as const;
+export type ValidSubject = (typeof ValidSubjects)[number];
+
 export const ValidSubjectSchema = v.picklist(ValidSubjects);
 
 export const SubjectBlogPageSchema = v.object({
