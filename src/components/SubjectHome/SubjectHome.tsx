@@ -8,7 +8,7 @@ import styles from "./subjectHome.module.css";
 
 export default function Subject() {
     const { content, groups } = useLoaderData({
-        from: "/$subject",
+        from: "/subjects/$name",
     });
 
     const highlightedBlogElms = content.highlights.map((l) => <HighlightedBlog key={l} splat={l} />);

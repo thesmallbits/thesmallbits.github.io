@@ -6,33 +6,33 @@ const BlogsList: MenuListProps = {
         {
             title: "Physics",
             type: "internal",
-            to: "/$subject",
+            to: "/subjects/$name",
             slug: {
-                subject: "physics",
+                name: "physics",
             },
         },
         {
             title: "Chemistry",
             type: "internal",
-            to: "/$subject",
+            to: "/subjects/$name",
             slug: {
-                subject: "chemistry",
+                name: "chemistry",
             },
         },
         {
             title: "Mathematics",
             type: "internal",
-            to: "/$subject",
+            to: "/subjects/$name",
             slug: {
-                subject: "maths",
+                name: "maths",
             },
         },
         {
             title: "General",
             type: "internal",
-            to: "/$subject",
+            to: "/subjects/$name",
             slug: {
-                subject: "general",
+                name: "general",
             },
         },
     ],

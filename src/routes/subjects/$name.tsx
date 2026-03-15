@@ -7,15 +7,15 @@ import { getFromLocalStorage, groupMetadataAlphabetically } from "@/lib";
 import { filterArrayByRegex } from "@/lib/filterArray";
 import { type RegistryMetadata, ValidSubjectSchema } from "@/schemas";
 
-export const Route = createFileRoute("/$subject")({
+export const Route = createFileRoute("/subjects/$name")({
     component: SubjectHome,
     params: {
-        parse: ({ subject }) => ({
-            subject: v.parse(ValidSubjectSchema, subject),
+        parse: ({ name }) => ({
+            name: v.parse(ValidSubjectSchema, name),
         }),
     },
-    loader({ params: { subject } }) {
-        const content = subjectPageIndex[subject];
+    loader({ params: { name } }) {
+        const content = subjectPageIndex[name];
 
         const subjectSplats: string[] = JSON.parse(
             getFromLocalStorage(content.title, () => {
