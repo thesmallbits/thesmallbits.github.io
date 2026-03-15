@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import * as v from "valibot";
 import SubjectHome from "@/components/SubjectHome";
 import blogRegistry from "@/content/BlogRegistry";
-import { subjectPageIndex } from "@/content/subjectHomePages";
+import { subjectPageIndex } from "@/content/Subjects";
 import { getFromLocalStorage, groupMetadataAlphabetically } from "@/lib";
 import { filterArrayByRegex } from "@/lib/filterArray";
 import { type RegistryMetadata, ValidSubjectSchema } from "@/schemas";

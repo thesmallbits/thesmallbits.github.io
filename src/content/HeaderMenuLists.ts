@@ -1,8 +1,14 @@
 import type { MenuListProps } from "@/components/Header/MenuList";
 
 const BlogsList: MenuListProps = {
-    title: "Blogs",
+    title: "Subjects",
     links: [
+        {
+            title: "All",
+            type: "internal",
+            to: "/subjects",
+            slug: {},
+        },
         {
             title: "Physics",
             type: "internal",

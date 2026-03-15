@@ -1,0 +1,12 @@
+.tapeBody, .tapeEdge {
+    background-color: #89512980;
+}
+.tapeBody {
+}
+.tapeEdge {
+    mask-image: url("@/assets/Ribbon.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: bottom;
+}
+/**/
