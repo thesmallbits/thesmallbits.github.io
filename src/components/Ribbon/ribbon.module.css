@@ -1,0 +1,7 @@
+.ribbon {
+    background-color: var(--ribbon-color);
+    mask-image: url("@/assets/Ribbon.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: bottom;
+}

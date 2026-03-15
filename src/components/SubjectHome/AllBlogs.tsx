@@ -40,7 +40,7 @@ export default function AllBlogs({ groups }: AllBlogsProps) {
     return (
         <section className="">
             <div className="flex flex-wrap gap-1">{letterLinks}</div>
-            <ul className="mt-3 grid gap-2 md:grid-cols-2">{letterSections}</ul>
+            <ul className="mt-3 grid gap-4 md:grid-cols-2">{letterSections}</ul>
         </section>
     );
 }
@@ -102,13 +102,18 @@ function BlogLink({ splat }: { splat: string }) {
                 onClick={handleClick}
                 className={cn(
                     styles.blogLink,
-                    "block cursor-pointer p-1 px-2 text-start outline outline-light-border transition-shadow duration-300 hover:shadow hover:outline-2 active:outline-2",
+                    "block cursor-pointer p-1 px-2 text-start outline-2 outline-light-border transition-shadow duration-300 hover:shadow hover:outline-2 active:outline-2",
+                    // "shadow-light-text-primary/60 shadow-xs",
                     "bg-light-secondary",
                 )}
             >
                 <h4>{meta.title}</h4>
 
-                <div className="flex flex-wrap space-x-1 border-light-border border-t pt-1 text-light-text-tertiary text-sm">
+                <div
+                    className={cn(
+                        "flex flex-wrap space-x-1 border-light-border border-t pt-1 text-light-text-tertiary text-sm",
+                    )}
+                >
                     <p className="w-fit border-light-border border-r pr-1">{meta.author}</p>
                     <p className="w-fit border-light-border border-r pr-1">{meta.modified_at.toDateString()}</p>
                     <Activity mode={Boolean(meta.reading_minutes)}>

@@ -1,9 +1,4 @@
 @reference "tailwindcss";
-.subjectTitle {
-    /*--text-stroke: 1px;*/
-    /*-webkit-text-stroke: var(--text-stroke) var(--color-light-border);*/
-    /*color: var(--color-light-secondary);*/
-}
 @media (width >= 40em) {
     .subjectTitle {
         --text-stroke: 3px;
@@ -19,7 +14,6 @@
     .line {
         @apply border-l-2 absolute;
         border-color: var(--color-light-border);
-
         top: anchor(--letter center);
         left: anchor(--letter left);
         bottom: anchor(--last-link center);

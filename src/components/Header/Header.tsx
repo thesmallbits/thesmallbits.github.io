@@ -68,10 +68,9 @@ export default function Header() {
             <header
                 className={cn(
                     "primary-border cool-background-shit shadow shadow-light-secondary",
-                    // NOTE: Change header height here if changing the base font size or else shit would overflow
-                    "z-90 h-12 w-full border-0 border-t-0 border-b md:h-14",
-                    "grid",
-                    isRoot ? "grid-cols-2" : "grid-cols-[auto_1fr_auto]",
+                    "z-90 h-fit w-full border-0 border-t-0 border-b md:h-14",
+                    "grid place-content-center",
+                    isRoot ? "grid-cols-2" : "grid-cols-3",
                 )}
             >
                 <span className="z-20 m-2 ml-4 flex gap-2">

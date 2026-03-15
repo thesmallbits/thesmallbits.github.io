@@ -1,9 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { lazy } from "react";
 import * as v from "valibot";
-
-const SubjectHome = lazy(() => import("@/components/SubjectHome"));
-
+import SubjectHome from "@/components/SubjectHome";
 import blogRegistry from "@/content/BlogRegistry";
 import { subjectPageIndex } from "@/content/subjectHomePages";
 import { getFromLocalStorage, groupMetadataAlphabetically } from "@/lib";

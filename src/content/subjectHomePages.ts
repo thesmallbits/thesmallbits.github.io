@@ -1,3 +1,4 @@
+// TODO: Add backgrounds for all subjects
 import * as v from "valibot";
 import { type SubjectBlogIndex, SubjectBlogIndexSchema } from "@/schemas";
 
@@ -12,6 +13,7 @@ const index: SubjectBlogIndex = {
         quote: "Chemistry jaaye bhaad me, mera dhyaan to meri stree par rahega",
         quote_author: "Divij",
         highlights: ["chemistry/fischer-indole-synthesis", "chemistry/beckmann-rearrangement"],
+        background_image: "/blog_home_backdrops/chemistry.png",
     },
     maths: {
         regex: /^maths/,
@@ -19,6 +21,7 @@ const index: SubjectBlogIndex = {
         quote: "Chemistry jaaye bhaad me, mera dhyaan to meri stree par rahega",
         quote_author: "Divij",
         highlights: [],
+        background_image: "/blog_home_backdrops/chemistry.png",
     },
     physics: {
         regex: /^physics/,
@@ -26,6 +29,7 @@ const index: SubjectBlogIndex = {
         quote: "Chemistry jaaye bhaad me, mera dhyaan to meri stree par rahega",
         quote_author: "Divij",
         highlights: [],
+        background_image: "/blog_home_backdrops/chemistry.png",
     },
     general: {
         regex: /^general/,
@@ -33,6 +37,7 @@ const index: SubjectBlogIndex = {
         quote: "Chemistry jaaye bhaad me, mera dhyaan to meri stree par rahega",
         quote_author: "Divij",
         highlights: [],
+        background_image: "/blog_home_backdrops/chemistry.png",
     },
 } as const;
 

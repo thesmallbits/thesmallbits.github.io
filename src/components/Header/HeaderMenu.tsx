@@ -1,5 +1,6 @@
 import { cn, type ReactRef } from "@d1vij/shit-i-always-use";
 import { useEffect, useMemo, useRef } from "react";
+import Ribbon from "@/components/Ribbon";
 import styles from "./header.module.css";
 import { MenuList, type MenuListProps } from "./MenuList";
 import { useMenuState } from "./MenuStateContext";
@@ -69,13 +70,7 @@ export default function Menu({ lists, menuButtonRef }: MenuProps) {
         >
             <div className={cn("grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3")}>{elms}</div>
 
-            {/*ribbon*/}
-            <div className="relative h-[90%] w-10 shadow-xl">
-                <div className="absolute inset-0 -mt-5 size-full bg-light-shade-red">
-                    <div className="mx-auto mt-1 size-3 rounded-3xl bg-light-text-bg"></div>
-                </div>
-                <div className={cn(styles.ribbon, "absolute bottom-0 left-0 aspect-square w-full translate-y-2")}></div>
-            </div>
+            <Ribbon />
         </div>
     );
 }

@@ -14,6 +14,7 @@ export const SubjectBlogPageSchema = v.object({
     quote: v.pipe(v.optional(v.string(), UNDEFINED_QUOTE), v.description("the quote to show below the subject title")),
     quote_author: v.pipe(v.optional(v.string(), UNDEFINED_QUOTE_AUTHOR), v.description("quote author")),
     highlights: v.pipe(v.array(BlogRegistryKeySchema), v.description("blogs to preview on the subject's home page")),
+    background_image: v.string(),
 });
 
 // what in the convoluted shit is this

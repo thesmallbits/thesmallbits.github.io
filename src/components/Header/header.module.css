@@ -15,14 +15,6 @@
     }
 }
 
-.ribbon {
-    background-color: var(--color-light-shade-red);
-    mask-image: url(Ribbon.svg);
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    mask-position: bottom;
-}
-
 .menulist {
     .listTitle {
         anchor-name: --list-title;
