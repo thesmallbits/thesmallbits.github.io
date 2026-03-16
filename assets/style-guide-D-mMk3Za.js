@@ -1,4 +1,4 @@
-import{n as o}from"./chunk-CyzFmspp.js";import{t as l}from"./jsx-runtime-xwFT6IXg.js";import"./react-D5d2UqJc.js";import{t as c}from"./compiler-runtime-BFT9Lfuk.js";var d=c(),n=o(l(),1);function a(s){const e=(0,d.c)(2),{text:r}=s;let t;return e[0]!==r?(t=(0,n.jsxs)("p",{children:["Loaded from sample: ",r]}),e[0]=r,e[1]=t):t=e[1],t}const m="this is a variable imported from mdx file";function h(){return"This is a component imported from mdx file"}function i(s){const e={a:"a",blockquote:"blockquote",code:"code",del:"del",em:"em",h1:"h1",h2:"h2",h3:"h3",img:"img",li:"li",ol:"ol",p:"p",pre:"pre",strong:"strong",ul:"ul",...s.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(e.h1,{children:"Rules and regulations (and features) while writing mdx"}),`
+import{r as o,t as l}from"./jsx-runtime-C3ZeA-51.js";import"./react-C0sklxxm.js";import{t as c}from"./compiler-runtime-CnMbnKov.js";var d=c(),n=o(l(),1);function a(s){const e=(0,d.c)(2),{text:r}=s;let t;return e[0]!==r?(t=(0,n.jsxs)("p",{children:["Loaded from sample: ",r]}),e[0]=r,e[1]=t):t=e[1],t}const m="this is a variable imported from mdx file";function h(){return"This is a component imported from mdx file"}function i(s){const e={a:"a",blockquote:"blockquote",code:"code",del:"del",em:"em",h1:"h1",h2:"h2",h3:"h3",img:"img",li:"li",ol:"ol",p:"p",pre:"pre",strong:"strong",ul:"ul",...s.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(e.h1,{children:"Rules and regulations (and features) while writing mdx"}),`
 `,(0,n.jsxs)(e.blockquote,{children:[`
 `,(0,n.jsx)(e.p,{children:"MDX has (almost) all features of normal markdown"}),`
 `]}),`
@@ -224,4 +224,4 @@ function Foo() {
   tags: ["tutorial", "style guide", "mdx"],
 };
 `})}),`
-`,(0,n.jsx)(e.p,{children:"If the exported meta is not upto the schema, runtime error will be raised"})]})}function u(s={}){const{wrapper:e}=s.components||{};return e?(0,n.jsx)(e,{...s,children:(0,n.jsx)(i,{...s})}):i(s)}export{u as default};
+`,(0,n.jsx)(e.p,{children:"If the exported meta is not upto the schema, runtime error will be raised"})]})}function g(s={}){const{wrapper:e}=s.components||{};return e?(0,n.jsx)(e,{...s,children:(0,n.jsx)(i,{...s})}):i(s)}export{g as default};

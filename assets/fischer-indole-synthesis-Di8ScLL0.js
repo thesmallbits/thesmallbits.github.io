@@ -1,4 +1,4 @@
-import{n as s}from"./chunk-CyzFmspp.js";import{t as o}from"./jsx-runtime-xwFT6IXg.js";var e=s(o());function r(t){const n={em:"em",h1:"h1",h2:"h2",h3:"h3",h4:"h4",h5:"h5",hr:"hr",li:"li",ol:"ol",p:"p",...t.components},{Image:i}=n;return i||a("Image",!0),(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)(n.h1,{children:"The Fischer Indole Synthesis:"}),`
+import{r as s,t as o}from"./jsx-runtime-C3ZeA-51.js";var e=s(o());function r(t){const n={em:"em",h1:"h1",h2:"h2",h3:"h3",h4:"h4",h5:"h5",hr:"hr",li:"li",ol:"ol",p:"p",...t.components},{Image:i}=n;return i||a("Image",!0),(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)(n.h1,{children:"The Fischer Indole Synthesis:"}),`
 `,(0,e.jsx)(n.h2,{children:"Introduction"}),`
 `,(0,e.jsx)(n.p,{children:`The Fischer Indole Synthesis by Emil Fischer stands out as one of the most useful reactions known to chemists. The indole ring (benzene ring fused to pyrrole ring)
 so formed is used extensively in medicinal chemistry like the synthesis of Indometacin, Triptan and Vincristine.`}),`
@@ -60,4 +60,4 @@ The hydrazone formation is followed by the indole formation and finally complete
 `,(0,e.jsx)(n.li,{children:"Francis A.Carey, Richard J.Sundberg. Asvanced Organic Chemistry: Part B Reactions and Synethesis. Springer 2008."}),`
 `,(0,e.jsx)(n.li,{children:`Gribble, G. W. J. Chem. Soc., Perkin trans 1 2000, 1045; Humphrey, G. R.; Kuethe, J. T. Chem.
 Rev. 2006, 106, 2875.`}),`
-`]})]})}function c(t={}){const{wrapper:n}=t.components||{};return n?(0,e.jsx)(n,{...t,children:(0,e.jsx)(r,{...t})}):r(t)}function a(t,n){throw new Error("Expected "+(n?"component":"object")+" `"+t+"` to be defined: you likely forgot to import, pass, or provide it.")}export{c as default};
+`]})]})}function d(t={}){const{wrapper:n}=t.components||{};return n?(0,e.jsx)(n,{...t,children:(0,e.jsx)(r,{...t})}):r(t)}function a(t,n){throw new Error("Expected "+(n?"component":"object")+" `"+t+"` to be defined: you likely forgot to import, pass, or provide it.")}export{d as default};
