@@ -6,7 +6,12 @@ const commitLink = `https://github.com/thesmallbits/thesmallbits.github.io/tree/
 export default function Footer() {
     const vibrator = useVibrate();
     return (
-        <footer className={cn("primary-border", "z-10 flex h-fit w-full justify-between text-center")}>
+        <footer
+            className={cn(
+                "primary-border",
+                "z-10 flex h-fit w-full justify-between text-center",
+            )}
+        >
             <Link
                 to="/"
                 onClick={() => vibrator(50)}

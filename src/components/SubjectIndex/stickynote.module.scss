@@ -1,0 +1,35 @@
+@use "sass:color";
+
+@mixin NoteMixin($color) {
+  background-color: $color;
+  border-style: solid;
+  border-width: 3px;
+  border-color: color.adjust($color, $lightness: -15%, $alpha: -0.8);
+  .background {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+      125% 125% at 50% 10%,
+      rgba(255, 255, 255, 0) 25%,
+      $color 100%
+    );
+  }
+}
+
+.rose {
+  @include NoteMixin(#e8b4b8);
+}
+.mint {
+  @include NoteMixin(#bee3db);
+}
+.gray {
+  @include NoteMixin(#e5e5e5);
+}
+.blue {
+  @include NoteMixin(#a7c7e7);
+}
+
+.yellow {
+  @include NoteMixin(#f6e7a1);
+  $bg: #fff;
+}

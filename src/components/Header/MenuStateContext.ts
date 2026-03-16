@@ -5,7 +5,9 @@ export type MenuStateContextType = {
     isOpen: boolean;
     setIsOpen: StateSetterFunction<boolean>;
 };
-export const MenuStateContext = createContext<MenuStateContextType | null>(null);
+export const MenuStateContext = createContext<MenuStateContextType | null>(
+    null,
+);
 
 export function useMenuState() {
     const ctx = useContext(MenuStateContext);

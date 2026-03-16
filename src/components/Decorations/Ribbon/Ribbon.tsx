@@ -13,7 +13,8 @@ export default function Ribbon({ className, ribbonColor }: RibbonProps) {
                 className="absolute inset-0 -mt-5 size-full"
                 style={
                     {
-                        backgroundColor: ribbonColor || "var(--color-light-shade-red)",
+                        backgroundColor:
+                            ribbonColor || "var(--color-light-shade-red)",
                         "--ribbon-color": ribbonColor,
                     } as React.CSSProperties
                 }
@@ -21,10 +22,14 @@ export default function Ribbon({ className, ribbonColor }: RibbonProps) {
                 <div className="mx-auto mt-1 size-3 rounded-3xl bg-light-text-bg"></div>
             </div>
             <div
-                className={cn(styles.ribbon, "absolute bottom-0 left-0 aspect-square w-full translate-y-2")}
+                className={cn(
+                    styles.ribbon,
+                    "absolute bottom-0 left-0 aspect-square w-full translate-y-2",
+                )}
                 style={
                     {
-                        backgroundColor: ribbonColor || "var(--color-light-shade-red)",
+                        backgroundColor:
+                            ribbonColor || "var(--color-light-shade-red)",
                         "--ribbon-color": ribbonColor,
                     } as React.CSSProperties
                 }

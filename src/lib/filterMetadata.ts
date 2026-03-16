@@ -1,4 +1,8 @@
-import type { RegistryMetadata, RegistryMetadataKeys, RegistryMetadataKeysWithStringValues } from "@/schemas";
+import type {
+    RegistryMetadata,
+    RegistryMetadataKeys,
+    RegistryMetadataKeysWithStringValues,
+} from "@/schemas";
 
 export function filterMetadataBasedOnRegex<Based extends RegistryMetadataKeys>(
     metadatas: RegistryMetadata[],

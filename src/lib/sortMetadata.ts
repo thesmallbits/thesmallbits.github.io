@@ -6,7 +6,10 @@ import type { RegistryMetadata, RegistryMetadataKeys } from "@/schemas";
  * @param based Key of {@link UserDefinedMetadata} on which to sort. The keys should be comparable
  * @returns Sorted array of {@link UserDefinedMetadata} objects based on ascending order
  */
-export function sortMetadata(metadatas: RegistryMetadata[], based: RegistryMetadataKeys) {
+export function sortMetadata(
+    metadatas: RegistryMetadata[],
+    based: RegistryMetadataKeys,
+) {
     return metadatas.toSorted((f, s) => {
         const first = f[based];
         const second = s[based];

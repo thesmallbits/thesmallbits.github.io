@@ -26,15 +26,19 @@ export const Route = createFileRoute("/subjects/$name")({
             }),
         );
 
-        const subjectMetadatas = (Object.values(blogRegistry.metadata) as RegistryMetadata[]).filter((m) =>
-            subjectSplats.includes(m.__splat),
-        );
-        const groups: ReturnType<typeof groupMetadataAlphabetically> = JSON.parse(
-            getFromLocalStorage(`${content.title}-groups`, () => {
-                const groups = groupMetadataAlphabetically(subjectMetadatas, "title");
-                return JSON.stringify(groups);
-            }),
-        );
+        const subjectMetadatas = (
+            Object.values(blogRegistry.metadata) as RegistryMetadata[]
+        ).filter((m) => subjectSplats.includes(m.__splat));
+        const groups: ReturnType<typeof groupMetadataAlphabetically> =
+            JSON.parse(
+                getFromLocalStorage(`${content.title}-groups`, () => {
+                    const groups = groupMetadataAlphabetically(
+                        subjectMetadatas,
+                        "title",
+                    );
+                    return JSON.stringify(groups);
+                }),
+            );
 
         return {
             content: content,

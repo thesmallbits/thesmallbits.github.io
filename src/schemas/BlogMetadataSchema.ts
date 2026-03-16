@@ -19,7 +19,9 @@ export const UserDefinedMetadataSchema = v.object({
     reading_minutes: v.optional(v.number(), UNDEFINED_READING_TIME),
 });
 
-export type UserDefinedMetadata = v.InferInput<typeof UserDefinedMetadataSchema>;
+export type UserDefinedMetadata = v.InferInput<
+    typeof UserDefinedMetadataSchema
+>;
 export type UserDefinedMetadataKey = keyof UserDefinedMetadata;
 
 /**
@@ -35,4 +37,7 @@ export type RegistryMetadataKeys = keyof RegistryMetadata;
 /**
  * Registry Metadata keys whose values are strings
  */
-export type RegistryMetadataKeysWithStringValues = KeysWithValueAsType<RegistryMetadata, string>;
+export type RegistryMetadataKeysWithStringValues = KeysWithValueAsType<
+    RegistryMetadata,
+    string
+>;

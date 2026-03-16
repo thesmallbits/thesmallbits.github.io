@@ -27,6 +27,7 @@
         "lucide-react": "^0.577.0",
         "nanoid": "^5.1.6",
         "postcss": "^8.5.8",
+        "radashi": "^12.7.2",
         "react": "^19.2.4",
         "react-dom": "^19.2.4",
         "simple-icons": "^16.12.0",

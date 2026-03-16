@@ -11,7 +11,10 @@ import { getFromLocalStorage } from "@/lib";
  * @param callback Function returning a string which will be stored in
  * @returns Stringified version of value
  */
-export function useLocalStorageWithCache(key: string, callback: () => string): string {
+export function useLocalStorageWithCache(
+    key: string,
+    callback: () => string,
+): string {
     const value = useMemo(() => {
         return getFromLocalStorage(key, callback);
     }, [key, callback]);

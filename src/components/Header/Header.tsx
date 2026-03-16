@@ -1,4 +1,9 @@
-import { cn, type PropsWithChildren, type ReactRef, useVibrate } from "@d1vij/shit-i-always-use";
+import {
+    cn,
+    type PropsWithChildren,
+    type ReactRef,
+    useVibrate,
+} from "@d1vij/shit-i-always-use";
 import { Link, type LinkProps, useLocation } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 
@@ -24,7 +29,11 @@ function HeaderLink({ title, to }: HeaderLinkProps) {
     const vibrator = useVibrate();
     return (
         <HeaderInteractable>
-            <Link className={cn("text-nowrap")} to={to} onClick={() => vibrator(50)}>
+            <Link
+                className={cn("text-nowrap")}
+                to={to}
+                onClick={() => vibrator(50)}
+            >
                 {title}
             </Link>
         </HeaderInteractable>
@@ -43,7 +52,12 @@ function HeaderButton({ title, action, ref }: HeaderButtonProps) {
     }
     return (
         <HeaderInteractable>
-            <button ref={ref} onClick={handleClick} type="button" className="cursor-pointer">
+            <button
+                ref={ref}
+                onClick={handleClick}
+                type="button"
+                className="cursor-pointer"
+            >
                 {title}
             </button>
         </HeaderInteractable>
@@ -74,7 +88,11 @@ export default function Header() {
                 )}
             >
                 <span className="z-20 m-2 ml-4 flex gap-2">
-                    <HeaderButton title="Menu" ref={menuButtonRef} action={toggleMenu} />
+                    <HeaderButton
+                        title="Menu"
+                        ref={menuButtonRef}
+                        action={toggleMenu}
+                    />
                 </span>
                 <h1
                     className={cn(

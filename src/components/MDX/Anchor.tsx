@@ -5,7 +5,10 @@ import { useMemo, useState } from "react";
 import { stylemap } from "@/styles/mdx.stylesmap";
 
 export function Anchor(props: ElementProps<"a">) {
-    const selfOrigin = useMemo(() => new URL(window.location.href).origin.toString(), []);
+    const selfOrigin = useMemo(
+        () => new URL(window.location.href).origin.toString(),
+        [],
+    );
     const [target] = useState<"_self" | "_blank">(() => {
         const href = props.href;
 
@@ -29,13 +32,22 @@ export function Anchor(props: ElementProps<"a">) {
 
     if (target === "_self") {
         return (
-            <button className={cn(stylemap.anchor, "cursor-pointer")} type="button" onClick={handleSelfClick}>
+            <button
+                className={cn(stylemap.anchor, "cursor-pointer")}
+                type="button"
+                onClick={handleSelfClick}
+            >
                 {props.children}
             </button>
         );
     } else
         return (
-            <a className={stylemap.anchor} href={props.href} target="_blank" rel="noopener">
+            <a
+                className={stylemap.anchor}
+                href={props.href}
+                target="_blank"
+                rel="noopener"
+            >
                 {props.children}
             </a>
         );

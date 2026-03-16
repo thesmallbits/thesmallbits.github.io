@@ -7,21 +7,36 @@
  * Tape brown #895129
  */
 
+import { cn, getIntBetween } from "@d1vij/shit-i-always-use";
+
 import { useMemo } from "react";
 import { getRandomTapePlacement } from "@/components/Decorations/Tape";
 import { subjectPageIndex } from "@/content/Subjects";
 import type { ValidSubject } from "@/schemas";
+import type { colorVarients } from "./SubjectIndex";
+import styles from "./stickynote.module.scss";
 
 type StickyNoteProps = {
     subject: ValidSubject;
+    varient: (typeof colorVarients)[number];
 };
 
-export default function StickyNote({ subject }: StickyNoteProps) {
+export default function StickyNote({ subject, varient }: StickyNoteProps) {
     const meta = subjectPageIndex[subject];
     const TapePlacement = useMemo(getRandomTapePlacement, []);
 
     return (
-        <div className="relative size-70 bg-[#F6E7A1]">
+        <div
+            className={cn(
+                styles[varient],
+                styles.stickyNote,
+                "relative size-70",
+            )}
+            style={{
+                transform: `rotate(${getIntBetween(-5, 5)}deg)`,
+            }}
+        >
+            <div className={styles.background}></div>
             {TapePlacement}
             {meta.title}
         </div>

@@ -2,7 +2,9 @@ import { cn } from "@d1vij/shit-i-always-use";
 import styles from "./hero.module.css";
 export default function Hero() {
     return (
-        <section className={cn(styles.hero, "aspect-auto h-[45dvh] md:h-[60dvh]")}>
+        <section
+            className={cn(styles.hero, "aspect-auto h-[45dvh] md:h-[60dvh]")}
+        >
             <div
                 className={cn(
                     "mx-auto h-full border-light-border bg-lightsecondary",

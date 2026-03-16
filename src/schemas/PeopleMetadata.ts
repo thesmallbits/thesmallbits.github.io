@@ -16,7 +16,11 @@ const LinksSchema = v.pipe(
             url: v.pipe(v.string(), v.url()),
         }),
         v.object({
-            for: v.union([v.literal("youtube"), v.literal("github"), v.literal("website")]),
+            for: v.union([
+                v.literal("youtube"),
+                v.literal("github"),
+                v.literal("website"),
+            ]),
             url: v.pipe(v.string(), v.url()),
         }),
     ]),

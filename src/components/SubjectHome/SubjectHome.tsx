@@ -11,18 +11,33 @@ export default function Subject() {
         from: "/subjects/$name",
     });
 
-    const highlightedBlogElms = content.highlights.map((l) => <HighlightedBlog key={l} splat={l} />);
+    const highlightedBlogElms = content.highlights.map((l) => (
+        <HighlightedBlog key={l} splat={l} />
+    ));
     const hasBlogs = Object.keys(groups).length !== 0;
 
     const BlogSection = (
         <div className="relative z-20 mx-auto w-[90%] p-4">
             {/*🤡 think of some better way than this*/}
             <Activity show={content.quote !== UNDEFINED_QUOTE}>
-                <section className={cn("ml-auto", "font-cursive", "mt-2 mb-4", "text-sm md:text-2xl")}>
+                <section
+                    className={cn(
+                        "ml-auto",
+                        "font-cursive",
+                        "mt-2 mb-4",
+                        "text-sm md:text-2xl",
+                    )}
+                >
                     <div className="ml-auto w-fit">
                         <h2>{content.quote}</h2>
-                        <Activity show={content.quote_author !== UNDEFINED_QUOTE_AUTHOR}>
-                            <h3 className="text-end">~ {content.quote_author}</h3>
+                        <Activity
+                            show={
+                                content.quote_author !== UNDEFINED_QUOTE_AUTHOR
+                            }
+                        >
+                            <h3 className="text-end">
+                                ~ {content.quote_author}
+                            </h3>
                         </Activity>
                     </div>
                 </section>
@@ -30,12 +45,20 @@ export default function Subject() {
 
             <div className="mx-auto md:w-[80%]">
                 <section className="mt-4">
-                    <h2 className="mb-4 font-semibold text-4xl underline decoration-3 decoration-dotted">Highlights</h2>
-                    <div className={cn("grid grid-cols-1 gap-4 md:grid-cols-2")}>{highlightedBlogElms}</div>
+                    <h2 className="mb-4 font-semibold text-4xl underline decoration-3 decoration-dotted">
+                        Highlights
+                    </h2>
+                    <div
+                        className={cn("grid grid-cols-1 gap-4 md:grid-cols-2")}
+                    >
+                        {highlightedBlogElms}
+                    </div>
                 </section>
 
                 <section className="mt-8">
-                    <h2 className="mb-4 font-semibold text-4xl underline decoration-3 decoration-dotted">All Blogs</h2>
+                    <h2 className="mb-4 font-semibold text-4xl underline decoration-3 decoration-dotted">
+                        All Blogs
+                    </h2>
                     <AllBlogs groups={groups} />
                 </section>
             </div>
@@ -45,9 +68,13 @@ export default function Subject() {
     const EmptySection = (
         <div className="relative grid size-full place-content-center">
             <div className="space-y-1 rounded border-2 border-light-border p-2 text-center backdrop-blur-[1px]">
-                <p className="text-2xl">No blogs have been written for this subject yet.</p>
+                <p className="text-2xl">
+                    No blogs have been written for this subject yet.
+                </p>
                 <p className="border-light-border border-t">
-                    <span className="mr-1 text-light-text-secondary italic">Psstt...</span>
+                    <span className="mr-1 text-light-text-secondary italic">
+                        Psstt...
+                    </span>
                     Interested in contributing here?? Maybe
                     <Link
                         to="/join-us"
