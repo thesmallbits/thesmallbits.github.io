@@ -14,13 +14,19 @@ function Metadata({ title, content }: MetadataProps) {
     return (
         <div className="">
             <h2 className="font-semibold text-lg md:text-xl">{title}</h2>
-            <h3 className="text-light-text-secondary text-sm md:text-base">{content}</h3>
+            <h3 className="text-light-text-secondary text-sm md:text-base">
+                {content}
+            </h3>
         </div>
     );
 }
 
 function Separator() {
-    return <div className="flex w-fit select-none items-center justify-center pt-1 text-center md:w-full">*</div>;
+    return (
+        <div className="flex w-fit select-none items-center justify-center pt-1 text-center md:w-full">
+            *
+        </div>
+    );
 }
 export default function BlogSlug() {
     const { component, metadata } = useLoaderData({ from: "/blogs/$" });
@@ -31,7 +37,11 @@ export default function BlogSlug() {
         </p>
     ));
     return (
-        <div className={cn("min-h-full w-dvw overflow-clip md:grid md:h-full md:grid-cols-[auto_1fr]")}>
+        <div
+            className={cn(
+                "min-h-full w-dvw overflow-clip md:grid md:h-full md:grid-cols-[auto_1fr]",
+            )}
+        >
             {/*sidebar*/}
             <section
                 className={cn(
@@ -47,8 +57,14 @@ export default function BlogSlug() {
                         title="Reading Time"
                         content={`${metadata.reading_minutes === UNDEFINED_READING_TIME ? "A few" : metadata.reading_minutes} minutes`}
                     />
-                    <Metadata title="Published" content={metadata.created_at.toDateString()} />
-                    <Metadata title="Modified" content={metadata.modified_at.toDateString()} />
+                    <Metadata
+                        title="Published"
+                        content={metadata.created_at.toDateString()}
+                    />
+                    <Metadata
+                        title="Modified"
+                        content={metadata.modified_at.toDateString()}
+                    />
                 </div>
                 <Separator />
                 <Metadata title="Tags" content="" />
@@ -56,9 +72,17 @@ export default function BlogSlug() {
                 <Separator />
             </section>
             {/*<Suspense fallback={BlogFallback}>*/}
-            <div className={cn("overflow-x-hidden overflow-y-scroll p-2 font-serifed", "relative")}>
+            <div
+                className={cn(
+                    "overflow-x-hidden overflow-y-scroll p-2 font-serifed",
+                    "relative",
+                )}
+            >
                 <section
-                    className={cn(styles.mdxContainer, "grid w-full grid-cols-1 p-2 md:w-[70%] lg:pt-10 lg:pl-30")}
+                    className={cn(
+                        styles.mdxContainer,
+                        "grid w-full grid-cols-1 p-2 md:w-[70%] lg:pt-10 lg:pl-30",
+                    )}
                     lang="en"
                 >
                     <MDXFromComponent

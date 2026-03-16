@@ -122,4 +122,9 @@ const Miscellaneous: MenuListProps = {
     ],
 };
 
-export const HeaderMenuLists = [BlogsList, RepositoryList, Miscellaneous, ContactList];
+export const HeaderMenuLists = [
+    BlogsList,
+    RepositoryList,
+    Miscellaneous,
+    ContactList,
+];

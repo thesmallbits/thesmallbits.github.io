@@ -1,4 +1,8 @@
-import type { RegistryMetadata, RegistryMetadataKeys, RegistryMetadataKeysWithStringValues } from "@/schemas";
+import type {
+    RegistryMetadata,
+    RegistryMetadataKeys,
+    RegistryMetadataKeysWithStringValues,
+} from "@/schemas";
 import type { CompareableType, KeysWithComparableValue } from "@/types";
 
 export type GroupedMetadata<Key> = Map<Key, RegistryMetadata[]>;
@@ -13,7 +17,9 @@ export type GroupedMetadata<Key> = Map<Key, RegistryMetadata[]>;
  */
 export function groupMetadataOnValues<Based extends keyof RegistryMetadata>(
     metadatas: RegistryMetadata[],
-    based: Based extends KeysWithComparableValue<RegistryMetadataKeys> ? Based : never,
+    based: Based extends KeysWithComparableValue<RegistryMetadataKeys>
+        ? Based
+        : never,
 ): GroupedMetadata<RegistryMetadata[Based]> {
     const groups = new Map<RegistryMetadata[Based], RegistryMetadata[]>();
 
@@ -37,7 +43,10 @@ export function groupMetadataOnValues<Based extends keyof RegistryMetadata>(
  * @returns
  * Grouped metadata with map with typed keys of lowercase letters, uppercase letters, numbers and any other but untyped single letter character
  */
-export function groupMetadataAlphabetically<Based extends RegistryMetadataKeys, Metadatas extends RegistryMetadata[]>(
+export function groupMetadataAlphabetically<
+    Based extends RegistryMetadataKeys,
+    Metadatas extends RegistryMetadata[],
+>(
     metadatas: Metadatas,
     based: Based extends RegistryMetadataKeysWithStringValues ? Based : never,
     caseSensitive: boolean = true,

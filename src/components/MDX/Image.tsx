@@ -22,12 +22,22 @@ type ImageProps = {
  * twStyles="border border-red-300"
  * />
  */
-export function Image({ alt, src, widthRem = 30, center, twStyles }: ImageProps) {
+export function Image({
+    alt,
+    src,
+    widthRem = 30,
+    center,
+    twStyles,
+}: ImageProps) {
     return (
         <img
             alt={alt}
             src={src}
-            className={cn("w-full md:w-(--img-md-width)", center && "mx-auto", twStyles)}
+            className={cn(
+                "w-full md:w-(--img-md-width)",
+                center && "mx-auto",
+                twStyles,
+            )}
             style={
                 {
                     "--img-md-width": `min(100%,${widthRem}rem)`,

@@ -19,7 +19,9 @@ export type MenuListProps = {
     links: (InternalLink | ExternalLink)[];
 };
 export function MenuList(props: MenuListProps) {
-    const linkElms = props.links.map((l) => <MenuListItem {...l} key={l.title} />);
+    const linkElms = props.links.map((l) => (
+        <MenuListItem {...l} key={l.title} />
+    ));
 
     return (
         <div className={cn(styles.menulist, "relative")}>
@@ -33,7 +35,12 @@ export function MenuList(props: MenuListProps) {
             >
                 {props.title}
             </h2>
-            <div className={cn(styles.indexline, "absolute w-0.5 rounded--2xl bg-light-border")}></div>
+            <div
+                className={cn(
+                    styles.indexline,
+                    "absolute w-0.5 rounded--2xl bg-light-border",
+                )}
+            ></div>
             <ul className={cn(styles.list, "")}>{linkElms}</ul>
         </div>
     );

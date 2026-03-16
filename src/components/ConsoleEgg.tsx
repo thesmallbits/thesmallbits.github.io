@@ -17,10 +17,13 @@ export default function ConsoleEgg() {
             color: "lightgreen",
             "font-size": "18px",
         });
-        prettyLog(`If you understand what's happening here, you should come join us: `, {
-            color: "yellow",
-            "font-size": "18px",
-        });
+        prettyLog(
+            `If you understand what's happening here, you should come join us: `,
+            {
+                color: "yellow",
+                "font-size": "18px",
+            },
+        );
         prettyLog(joinUsAt, {
             color: "turquoise",
             "font-size": "18px",

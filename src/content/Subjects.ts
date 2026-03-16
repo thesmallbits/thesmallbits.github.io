@@ -12,7 +12,10 @@ const index: SubjectBlogIndex = {
         title: "Chemistry",
         quote: "Chemistry jaaye bhaad me, mera dhyaan to meri stree par rahega",
         quote_author: "Divij",
-        highlights: ["chemistry/fischer-indole-synthesis", "chemistry/beckmann-rearrangement"],
+        highlights: [
+            "chemistry/fischer-indole-synthesis",
+            "chemistry/beckmann-rearrangement",
+        ],
         background_image: "/blog_home_backdrops/chemistry.png",
     },
     maths: {

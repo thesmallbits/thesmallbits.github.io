@@ -1,6 +1,6 @@
 import { cn, type ReactRef } from "@d1vij/shit-i-always-use";
 import { useEffect, useMemo, useRef } from "react";
-import Ribbon from "@/components/Ribbon";
+import Ribbon from "@/components/Decorations/Ribbon";
 import styles from "./header.module.css";
 import { MenuList, type MenuListProps } from "./MenuList";
 import { useMenuState } from "./MenuStateContext";
@@ -10,7 +10,10 @@ type MenuProps = {
     menuButtonRef: ReactRef<HTMLButtonElement | null>;
 };
 export default function Menu({ lists, menuButtonRef }: MenuProps) {
-    const elms = useMemo(() => lists.map((l) => <MenuList key={l.title} {...l} />), [lists]);
+    const elms = useMemo(
+        () => lists.map((l) => <MenuList key={l.title} {...l} />),
+        [lists],
+    );
     const ref = useRef<HTMLDivElement>(null);
     const { isOpen, setIsOpen } = useMenuState();
 
@@ -68,7 +71,13 @@ export default function Menu({ lists, menuButtonRef }: MenuProps) {
                 isOpen && "shadow",
             )}
         >
-            <div className={cn("grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3")}>{elms}</div>
+            <div
+                className={cn(
+                    "grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3",
+                )}
+            >
+                {elms}
+            </div>
 
             <Ribbon />
         </div>

@@ -1,0 +1,12 @@
+@use "sass:color";
+$brown: color.adjust(#89512980);
+.tapeBody,
+.tapeEdge {
+  background-color: $brown;
+}
+.tapeEdge {
+  mask-image: url("@/assets/Teeth.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: bottom;
+}

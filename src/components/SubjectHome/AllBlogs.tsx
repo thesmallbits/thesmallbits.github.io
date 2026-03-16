@@ -35,7 +35,9 @@ export default function AllBlogs({ groups }: AllBlogsProps) {
     }, [letters, handleLetterLinkClick]);
 
     const letterSections = useMemo(() => {
-        return letters.map((l) => <LetterSection letter={l} blogs={groups[l]} key={l} />);
+        return letters.map((l) => (
+            <LetterSection letter={l} blogs={groups[l]} key={l} />
+        ));
     }, [letters.map, groups]);
     return (
         <section className="">
@@ -50,7 +52,9 @@ type LetterSectionProps = {
     blogs: AllBlogsProps["groups"][string];
 };
 function LetterSection({ letter, blogs }: LetterSectionProps) {
-    const elms = blogs.map((b) => <BlogLink splat={b.__splat} key={b.__splat} />);
+    const elms = blogs.map((b) => (
+        <BlogLink splat={b.__splat} key={b.__splat} />
+    ));
 
     return (
         <li className={cn(styles.letterSection, "relative mt-1")}>
@@ -114,8 +118,12 @@ function BlogLink({ splat }: { splat: string }) {
                         "flex flex-wrap space-x-1 border-light-border border-t pt-1 text-light-text-tertiary text-sm",
                     )}
                 >
-                    <p className="w-fit border-light-border border-r pr-1">{meta.author}</p>
-                    <p className="w-fit border-light-border border-r pr-1">{meta.modified_at.toDateString()}</p>
+                    <p className="w-fit border-light-border border-r pr-1">
+                        {meta.author}
+                    </p>
+                    <p className="w-fit border-light-border border-r pr-1">
+                        {meta.modified_at.toDateString()}
+                    </p>
                     <Activity mode={Boolean(meta.reading_minutes)}>
                         <p className="w-fit">{meta.reading_minutes} mins</p>
                     </Activity>
