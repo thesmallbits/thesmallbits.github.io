@@ -17,9 +17,12 @@ export function Header(
 
     const [hash, setHash] = useState("");
     const { copy } = useClipboardText();
-    const { focus } = useSearch({ from: "/blogs/$" });
+    // const { focus } = useSearch({ from: "/blogs/$" });
 
     const router = useRouter();
+    const { focus } = useSearch({
+        strict: false,
+    });
     const selfLocation = useMemo(() => {
         const location = router.buildLocation({
             to: ".",
@@ -29,7 +32,7 @@ export function Header(
         // NOTE: If we ever in future use non hash
         // based routing remove the hash from here
         return `${window.origin}/#${location.href}`;
-    }, [router.buildLocation, hash]);
+    }, [router, hash]);
 
     useEffect(() => {
         if (focus === hash) {
