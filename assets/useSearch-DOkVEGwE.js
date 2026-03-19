@@ -1,1 +1,0 @@
-import{r as t}from"./useNavigate-BslciTZR.js";function u(r){return t({from:r.from,strict:r.strict,shouldThrow:r.shouldThrow,structuralSharing:r.structuralSharing,select:e=>r.select?r.select(e.search):e.search})}export{u as t};

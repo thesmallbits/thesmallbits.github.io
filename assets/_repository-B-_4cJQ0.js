@@ -1,1 +1,0 @@
-import{r as o,t}from"./jsx-runtime-C3ZeA-51.js";import"./react-C0sklxxm.js";import{t as i}from"./compiler-runtime-CnMbnKov.js";var m=i(),n=o(t());function c(){const e=(0,m.c)(1);let r;return e[0]===Symbol.for("react.memo_cache_sentinel")?(r=(0,n.jsx)("div",{children:'Hello "/repository/$repository"!'}),e[0]=r):r=e[0],r}export{c as component};
