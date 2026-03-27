@@ -1,6 +1,9 @@
-// TODO: check if lodash is actuallly being treeshaken or not
 import { shuffle } from "radashi";
 import { ValidSubjects } from "@/schemas";
+import {
+    stickyNoteTapePlacements,
+    type TapePlacements,
+} from "../Decorations/Tape";
 import StickyNote from "./StickyNote";
 
 export const colorVarients = [
@@ -10,6 +13,9 @@ export const colorVarients = [
     "mint",
     "gray",
 ] as const;
+export const tapePlacements = Object.keys(
+    stickyNoteTapePlacements,
+) as TapePlacements[];
 
 export default function SubjectIndex() {
     const colors = shuffle(colorVarients);
@@ -19,7 +25,8 @@ export default function SubjectIndex() {
             <StickyNote
                 key={idx}
                 subject={ValidSubjects[idx]}
-                varient={colors[idx % colors.length]}
+                color={colors[idx % colors.length]}
+                tape={tapePlacements[idx % colors.length]}
             />,
         );
     }

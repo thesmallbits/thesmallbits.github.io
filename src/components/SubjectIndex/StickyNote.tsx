@@ -7,10 +7,9 @@
  * Tape brown #895129
  */
 
-import { cn, getIntBetween } from "@d1vij/shit-i-always-use";
-
-import { useMemo } from "react";
-import { getRandomTapePlacement } from "@/components/Decorations/Tape";
+import { cn } from "@d1vij/shit-i-always-use";
+import { random } from "radashi";
+import { TapePlacements } from "@/components/Decorations/Tape";
 import { subjectPageIndex } from "@/content/Subjects";
 import type { ValidSubject } from "@/schemas";
 import type { colorVarients } from "./SubjectIndex";
@@ -18,26 +17,22 @@ import styles from "./stickynote.module.scss";
 
 type StickyNoteProps = {
     subject: ValidSubject;
-    varient: (typeof colorVarients)[number];
+    color: (typeof colorVarients)[number];
+    tape: TapePlacements | "random";
 };
 
-export default function StickyNote({ subject, varient }: StickyNoteProps) {
+export default function StickyNote({ subject, color, tape }: StickyNoteProps) {
     const meta = subjectPageIndex[subject];
-    const TapePlacement = useMemo(getRandomTapePlacement, []);
 
     return (
         <div
-            className={cn(
-                styles[varient],
-                styles.stickyNote,
-                "relative size-70",
-            )}
+            className={cn(styles[color], styles.stickyNote, "relative size-70")}
             style={{
-                transform: `rotate(${getIntBetween(-5, 5)}deg)`,
+                transform: `rotate(${random(-5, 5)}deg)`,
             }}
         >
             <div className={styles.background}></div>
-            {TapePlacement}
+            <TapePlacements varient={tape} />
             {meta.title}
         </div>
     );
